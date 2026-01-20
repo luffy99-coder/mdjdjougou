@@ -386,14 +386,28 @@
         display:block;
       }
 
-      .hero h1{
-        font-size:36px;
-      }
+      @media(max-width:900px){
+  .hero{
+    height:auto;
+    min-height:52vh;
+    padding:40px 18px;
+  }
 
-      .hero p{
-        font-size:18px;
-      }
+  .hero h1{
+    font-size:34px;
+    line-height:1.15;
+  }
 
+  .hero p{
+    font-size:17px;
+    line-height:1.75;
+  }
+
+  .hero-badges span{
+    font-size:13px;
+    padding:8px 12px;
+  }
+}
       .btn{
         width:100%;
         max-width:320px;
@@ -613,3 +627,4 @@
 
 </body>
 </html>
+
