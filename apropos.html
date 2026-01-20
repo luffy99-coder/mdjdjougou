@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ===================================================== -->
+  <!-- SEO ULTRA PRO – MAIRIE DES JEUNES DE DJOUGOU           -->
+  <!-- PAGE : À PROPOS (apropos.html)                        -->
+  <!-- Local + International | Open Graph | Twitter | Schema  -->
+  <!-- ===================================================== -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>À propos | Mairie des Jeunes de Djougou – Institution, Mission, Valeurs & Gouvernance</title>
+
+  <meta name="description" content="Découvrez la Mairie des Jeunes de Djougou (Bénin) : une institution de représentation et d’engagement de la jeunesse. Mission, vision, valeurs, gouvernance, domaines d’intervention et partenariats.">
+  <meta name="keywords" content="À propos Mairie des Jeunes de Djougou, institution jeunesse djougou, conseil des jeunes bénin, gouvernance locale jeunes, participation citoyenne, leadership des jeunes, développement local, youth council benin, civic engagement, youth leadership, local governance">
+  <meta name="author" content="Mairie des Jeunes de Djougou">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <link rel="canonical" href="https://mairiedesjeunesdjougou.org/apropos.html">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mairie des Jeunes de Djougou">
+  <meta property="og:title" content="À propos – Mairie des Jeunes de Djougou">
+  <meta property="og:description" content="Mission, vision, valeurs et gouvernance de la Mairie des Jeunes de Djougou.">
+  <meta property="og:url" content="https://mairiedesjeunesdjougou.org/apropos.html">
+  <meta property="og:image" content="https://mairiedesjeunesdjougou.org/logo.png">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="À propos – Mairie des Jeunes de Djougou">
+  <meta name="twitter:description" content="Institution de jeunesse : mission, vision, valeurs et gouvernance.">
+  <meta name="twitter:image" content="https://mairiedesjeunesdjougou.org/logo.png">
+
+  <!-- SCHEMA.ORG – ABOUT PAGE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "À propos – Mairie des Jeunes de Djougou",
+    "url": "https://mairiedesjeunesdjougou.org/apropos.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Mairie des Jeunes de Djougou",
+      "url": "https://mairiedesjeunesdjougou.org/"
+    },
+    "about": {
+      "@type": "GovernmentOrganization",
+      "name": "Mairie des Jeunes de Djougou",
+      "url": "https://mairiedesjeunesdjougou.org/",
+      "logo": "https://mairiedesjeunesdjougou.org/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Djougou",
+        "addressCountry": "BJ"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Djougou"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --green:#0b7a55;
+      --yellow:#f4c430;
+      --red:#c62828;
+      --dark:#0b1220;
+      --bodybg:#eef2f5;
+      --blue:#123a8a;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:"Segoe UI",Arial,sans-serif
+    }
+
+    body{
+      background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
+      color:#222;
+      line-height:1.7;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(255,255,255,.97);
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      z-index:1000;
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      font-weight:600;
+      font-size:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px
+    }
+
+    .logo img{
+      height:50px
+    }
+
+    .logo span{
+      font-weight:800;
+      color:var(--blue);
+      font-size:20px
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+    }
+
+    nav a{
+      margin:0 14px;
+      text-decoration:none;
+      color:#333;
+      font-weight:600;
+      font-size:18px;
+      position:relative;
+    }
+
+    nav a::after{
+      content:"";
+      position:absolute;
+      bottom:-6px;
+      left:0;
+      width:0;
+      height:2px;
+      background:var(--blue);
+      transition:.3s;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    nav a.active{
+      color:var(--blue);
+    }
+
+    nav a.active::after{
+      width:100%;
+    }
+
+    .menu-toggle{
+      display:none;
+      font-size:34px;
+      cursor:pointer;
+    }
+
+    /* HERO IMAGE (comme Accueil, version page) */
+    .hero{
+      height:55vh;
+      background:
+        linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),
+        url('fond-apropos.jpg') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+      margin-top:78px;
+    }
+
+    .hero h1{
+      font-size:46px;
+      max-width:980px;
+      margin:auto;
+      font-weight:900;
+    }
+
+    .hero p{
+      margin-top:18px;
+      font-size:19px;
+      line-height:1.85;
+      max-width:920px;
+      margin-left:auto;
+      margin-right:auto;
+      opacity:.96;
+    }
+
+    .hero-badges{
+      margin-top:16px;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .hero-badges span{
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:600;
+      font-size:14px;
+    }
+
+    main{
+      max-width:1200px;
+      margin:auto;
+      padding:45px 20px 80px;
+      display:grid;
+      gap:70px;
+    }
+
+    .section-card{
+      background:white;
+      padding:60px;
+      border-radius:22px;
+      box-shadow:0 15px 40px rgba(0,0,0,.08);
+      position:relative;
+      overflow:hidden;
+
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .6s ease, transform .6s ease;
+    }
+
+    .section-card.in-view{
+      opacity:1;
+      transform:none;
+    }
+
+    .section-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:6px;
+      height:100%;
+      background:linear-gradient(var(--blue),var(--green),var(--yellow));
+    }
+
+    .section-card h2{
+      text-align:center;
+      color:var(--blue);
+      margin-bottom:30px;
+      font-size:36px;
+    }
+
+    .section-card p{
+      margin-bottom:18px;
+      font-size:18px;
+      line-height:1.9;
+      color:#1f2937;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:26px;
+      margin-top:10px;
+    }
+
+    .box{
+      padding:30px;
+      border-radius:18px;
+      background:linear-gradient(180deg,#f9f9f9,#ffffff);
+      box-shadow:0 10px 25px rgba(0,0,0,.05);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .box:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(0,0,0,.08);
+    }
+
+    .box .sticker{
+      font-size:40px;
+      display:block;
+      margin-bottom:12px;
+      transition: transform .2s ease;
+    }
+
+    .box:hover .sticker{
+      transform: scale(1.06);
+    }
+
+    .box h3{
+      margin-bottom:10px;
+      color:#111827;
+      font-size:20px;
+    }
+
+    .box p{
+      font-size:16.5px;
+      line-height:1.85;
+      color:#374151;
+      margin:0;
+    }
+
+    .list{
+      margin-top:10px;
+      display:grid;
+      gap:12px;
+    }
+
+    .pill{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:14px 16px;
+      border-radius:16px;
+      background:#f8fafc;
+      border:1px solid #eef2f7;
+    }
+
+    .pill .ic{
+      font-size:22px;
+      line-height:1;
+      margin-top:2px;
+    }
+
+    .pill strong{
+      display:block;
+      color:#111827;
+      margin-bottom:2px;
+      font-size:16px;
+    }
+
+    .pill span{
+      color:#374151;
+      font-size:15.5px;
+      line-height:1.75;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:700;
+      margin:10px;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 25px rgba(0,0,0,.12);
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg,var(--yellow),#ffe27a);
+      color:#000;
+    }
+
+    .actions{
+      text-align:center;
+      margin-top:18px;
+    }
+
+    footer{
+      background:linear-gradient(90deg,var(--blue),var(--dark));
+      color:white;
+      padding:50px 20px;
+      text-align:center;
+    }
+
+    footer p{
+      opacity:.95
+    }
+
+    @media(max-width:900px){
+      nav{
+        position:absolute;
+        top:78px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        display:none;
+        box-shadow:0 10px 30px rgba(0,0,0,.1);
+      }
+
+      nav.active{ display:flex; }
+
+      nav a{
+        margin:16px 0;
+        font-size:19px;
+      }
+
+      .menu-toggle{ display:block; }
+
+      .hero{
+        height:52vh;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:17px;
+      }
+
+      .section-card{
+        padding:40px 25px;
+      }
+
+      .section-card h2{
+        font-size:30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="logo.png" alt="Logo Mairie des Jeunes de Djougou">
+      <span>Mairie des Jeunes de Djougou</span>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html" class="active">À propos</a>
+      <a href="projets.html">Projets</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="don.html">Don</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO IMAGE -->
+<section class="hero" aria-label="À propos">
+  <div>
+    <h1>À propos de la Mairie des Jeunes de Djougou</h1>
+    <p>
+      Institution de représentation et d’engagement de la jeunesse, la Mairie des Jeunes de Djougou
+      renforce la participation citoyenne, le leadership, l’inclusion et le développement local au Bénin.
+    </p>
+
+    <div class="hero-badges" aria-label="Informations clés">
+      <span>Institution de jeunesse • Djougou</span>
+      <span>Bénin • Gouvernance locale</span>
+      <span>Leadership • Partenariats</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section class="section-card">
+    <h2>🏛️ Qui sommes-nous ?</h2>
+    <p>
+      La <strong>Mairie des Jeunes de Djougou</strong> est un cadre institutionnel qui rassemble et représente
+      la jeunesse au niveau communal. Elle encourage l’expression responsable des jeunes, la co-construction
+      de solutions locales et la participation active à la vie publique.
+    </p>
+    <p>
+      Par ses programmes, la Mairie des Jeunes contribue à la <strong>citoyenneté</strong>, au <strong>leadership</strong>,
+      à l’<strong>inclusion</strong>, à l’<strong>employabilité</strong> et au <strong>développement durable</strong>,
+      en collaboration avec les autorités, la société civile et les partenaires.
+    </p>
+
+    <div class="grid-2">
+      <div class="box">
+        <span class="sticker">🎯</span>
+        <h3>Mission</h3>
+        <p>
+          Renforcer la participation citoyenne des jeunes, développer le leadership local
+          et soutenir des initiatives concrètes au service de la communauté.
+        </p>
+      </div>
+
+      <div class="box">
+        <span class="sticker">🌟</span>
+        <h3>Vision</h3>
+        <p>
+          Faire de Djougou une commune où la jeunesse est un acteur majeur,
+          responsable, inclusive, innovante et engagée pour un développement durable.
+        </p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="projets.html">Voir nos projets</a>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h2>🧭 Nos valeurs</h2>
+    <p>
+      Nos actions reposent sur des principes institutionnels clairs, favorisant la confiance,
+      la crédibilité et la cohésion sociale.
+    </p>
+
+    <div class="list">
+      <div class="pill">
+        <div class="ic">✅</div>
+        <div>
+          <strong>Responsabilité</strong>
+          <span>Promouvoir une jeunesse consciente, respectueuse des institutions et actrice du changement.</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <div class="ic">🤝</div>
+        <div>
+          <strong>Solidarité</strong>
+          <span>Agir pour le bien commun, soutenir les initiatives utiles et renforcer l’entraide communautaire.</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <div class="ic">🧠</div>
+        <div>
+          <strong>Leadership</strong>
+          <span>Former et accompagner des jeunes leaders capables de porter des projets et des solutions locales.</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <div class="ic">🌿</div>
+        <div>
+          <strong>Développement durable</strong>
+          <span>Encourager des actions responsables en faveur de l’environnement et d’une croissance inclusive.</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <div class="ic">🌍</div>
+        <div>
+          <strong>Ouverture</strong>
+          <span>Développer des partenariats et des coopérations au niveau national et international.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h2>🧩 Notre cadre d’action</h2>
+    <p>
+      La Mairie des Jeunes de Djougou intervient sur des priorités locales alignées
+      avec les enjeux de la jeunesse béninoise et des objectifs internationaux
+      (citoyenneté, leadership, employabilité, inclusion, environnement et coopération).
+    </p>
+
+    <div class="grid-2">
+      <div class="box">
+        <span class="sticker">🗳️</span>
+        <h3>Citoyenneté & leadership</h3>
+        <p>Éducation civique, participation, dialogue jeunes–autorités, formation de leaders.</p>
+      </div>
+
+      <div class="box">
+        <span class="sticker">🌿</span>
+        <h3>Environnement & initiatives vertes</h3>
+        <p>Sensibilisation, actions communautaires et promotion de comportements éco-responsables.</p>
+      </div>
+
+      <div class="box">
+        <span class="sticker">🤝</span>
+        <h3>Actions sociales & inclusion</h3>
+        <p>Solidarité, cohésion sociale, inclusion des jeunes vulnérables et égalité des chances.</p>
+      </div>
+
+      <div class="box">
+        <span class="sticker">💼</span>
+        <h3>Employabilité & projets économiques</h3>
+        <p>Appui à l’entrepreneuriat, développement de compétences, opportunités et initiatives locales.</p>
+      </div>
+
+      <div class="box">
+        <span class="sticker">🌍</span>
+        <h3>Ouverture & partenariats</h3>
+        <p>Coopération, appuis techniques et financiers, réseaux et opportunités internationales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h2>🏗️ Gouvernance & fonctionnement</h2>
+    <p>
+      Pour garantir la transparence et l’efficacité de ses actions, la Mairie des Jeunes
+      s’appuie sur une organisation structurée : une équipe dirigeante, des commissions
+      thématiques et un calendrier d’activités.
+    </p>
+
+    <div class="list">
+      <div class="pill">
+        <div class="ic">👥</div>
+        <div>
+          <strong>Équipe dirigeante</strong>
+          <span>Coordination générale, représentation institutionnelle et pilotage des initiatives.</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <div class="ic">🧾</div>
+        <div>
+          <strong>Commissions</strong>
+          <span>Citoyenneté, environnement, social, économie, communication et partenariats.</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <div class="ic">📅</div>
+        <div>
+          <strong>Plan d’action</strong>
+          <span>Programmation annuelle des projets, suivi des résultats et reporting des activités.</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <div class="ic">🤝</div>
+        <div>
+          <strong>Partenariats</strong>
+          <span>Collaboration avec autorités, organisations, ONG et partenaires techniques et financiers.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="equipe.html">Découvrir l’équipe</a>
+      <a class="btn btn-primary" href="contact.html">Devenir partenaire</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Mairie des Jeunes de Djougou — Tous droits réservés</p>
+  <p style="margin-top:10px;font-size:14px;opacity:.88">
+    Site conçu et développé par <strong>Dine (DineTech)</strong>
+  </p>
+</footer>
+
+<script>
+  function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+  }
+
+  // Animation au scroll (signature MDJ, pro, léger)
+  const cards = document.querySelectorAll(".section-card");
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting) e.target.classList.add("in-view");
+    });
+  }, { threshold: 0.12 });
+  cards.forEach(c=>io.observe(c));
+</script>
+
+</body>
+</html>
