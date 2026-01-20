@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ===================================================== -->
+  <!-- SEO ULTRA PRO – MAIRIE DES JEUNES DE DJOUGOU           -->
+  <!-- PAGE : ÉQUIPE (equipe.html)                           -->
+  <!-- Données dynamiques depuis Google Sheet (CSV public)    -->
+  <!-- Local + International | Open Graph | Twitter | Schema  -->
+  <!-- ===================================================== -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Équipe | Mairie des Jeunes de Djougou – Direction, Bureau & Membres actifs</title>
+
+  <meta name="description" content="Découvrez l’équipe de la Mairie des Jeunes de Djougou (Bénin) : Direction, Bureau et Membres actifs. Recherche et filtres, badges de responsabilité, affichage automatique depuis Google Sheet.">
+  <meta name="keywords" content="équipe mairie des jeunes djougou, direction mairie des jeunes, bureau mairie des jeunes, membres actifs djougou, jeunesse djougou, youth council benin, youth leadership, civic engagement, local governance youth">
+  <meta name="author" content="Mairie des Jeunes de Djougou">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <link rel="canonical" href="https://mairiedesjeunesdjougou.org/equipe.html">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mairie des Jeunes de Djougou">
+  <meta property="og:title" content="Équipe – Mairie des Jeunes de Djougou">
+  <meta property="og:description" content="Direction, Bureau et Membres actifs. Affichage automatique depuis Google Sheet.">
+  <meta property="og:url" content="https://mairiedesjeunesdjougou.org/equipe.html">
+  <meta property="og:image" content="https://mairiedesjeunesdjougou.org/logo.png">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Équipe – Mairie des Jeunes de Djougou">
+  <meta name="twitter:description" content="Découvrez les membres : Direction, Bureau, Membres actifs.">
+  <meta name="twitter:image" content="https://mairiedesjeunesdjougou.org/logo.png">
+
+  <!-- SCHEMA.ORG – ABOUT ORGANIZATION + MEMBERSHIP -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Équipe – Mairie des Jeunes de Djougou",
+    "url": "https://mairiedesjeunesdjougou.org/equipe.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Mairie des Jeunes de Djougou",
+      "url": "https://mairiedesjeunesdjougou.org/"
+    },
+    "about": {
+      "@type": "GovernmentOrganization",
+      "name": "Mairie des Jeunes de Djougou",
+      "url": "https://mairiedesjeunesdjougou.org/",
+      "logo": "https://mairiedesjeunesdjougou.org/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Djougou",
+        "addressCountry": "BJ"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Djougou"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --green:#0b7a55;
+      --yellow:#f4c430;
+      --red:#c62828;
+      --dark:#0b1220;
+      --bodybg:#eef2f5;
+      --blue:#123a8a;
+
+      --card:#ffffff;
+      --muted:#6b7280;
+      --ink:#111827;
+      --line:#e5e7eb;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:"Segoe UI",Arial,sans-serif
+    }
+
+    body{
+      background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
+      color:#222;
+      line-height:1.7;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(255,255,255,.97);
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      z-index:1000;
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      font-weight:600;
+      font-size:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px
+    }
+
+    .logo img{
+      height:50px
+    }
+
+    .logo span{
+      font-weight:800;
+      color:var(--blue);
+      font-size:20px
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+    }
+
+    nav a{
+      margin:0 14px;
+      text-decoration:none;
+      color:#333;
+      font-weight:600;
+      font-size:18px;
+      position:relative;
+    }
+
+    nav a::after{
+      content:"";
+      position:absolute;
+      bottom:-6px;
+      left:0;
+      width:0;
+      height:2px;
+      background:var(--blue);
+      transition:.3s;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    nav a.active{
+      color:var(--blue);
+    }
+
+    nav a.active::after{
+      width:100%;
+    }
+
+    .menu-toggle{
+      display:none;
+      font-size:34px;
+      cursor:pointer;
+    }
+
+    /* HERO IMAGE */
+    .hero{
+      height:55vh;
+      background:
+        linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),
+        url('fond-equipe.jpg') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+      margin-top:78px;
+    }
+
+    .hero h1{
+      font-size:46px;
+      max-width:980px;
+      margin:auto;
+      font-weight:900;
+    }
+
+    .hero p{
+      margin-top:18px;
+      font-size:19px;
+      line-height:1.85;
+      max-width:920px;
+      margin-left:auto;
+      margin-right:auto;
+      opacity:.96;
+    }
+
+    .hero-badges{
+      margin-top:16px;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .hero-badges span{
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:600;
+      font-size:14px;
+    }
+
+    main{
+      max-width:1200px;
+      margin:auto;
+      padding:45px 20px 80px;
+      display:grid;
+      gap:70px;
+    }
+
+    .section-card{
+      background:var(--card);
+      padding:60px;
+      border-radius:22px;
+      box-shadow:0 15px 40px rgba(0,0,0,.08);
+      position:relative;
+      overflow:hidden;
+
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .6s ease, transform .6s ease;
+    }
+
+    .section-card.in-view{
+      opacity:1;
+      transform:none;
+    }
+
+    .section-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:6px;
+      height:100%;
+      background:linear-gradient(var(--blue),var(--green),var(--yellow));
+    }
+
+    .section-card h2{
+      text-align:center;
+      color:var(--blue);
+      margin-bottom:20px;
+      font-size:36px;
+    }
+
+    .section-card p{
+      margin-bottom:18px;
+      font-size:18px;
+      line-height:1.9;
+      color:#1f2937;
+    }
+
+    /* Controls (recherche + filtres) */
+    .controls{
+      display:grid;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .search-row{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+
+    .search{
+      width:100%;
+      border:1px solid var(--line);
+      background:#f8fafc;
+      border-radius:16px;
+      padding:14px 16px;
+      font-size:16px;
+      font-weight:600;
+      outline:none;
+    }
+
+    .search:focus{
+      border-color:rgba(18,58,138,.45);
+      box-shadow:0 0 0 4px rgba(18,58,138,.12);
+      background:#fff;
+    }
+
+    .chips{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+    }
+
+    .chip{
+      border:1px solid var(--line);
+      background:#f8fafc;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:14px;
+      cursor:pointer;
+      user-select:none;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+
+    .chip:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    .chip.active{
+      background:rgba(18,58,138,.10);
+      border-color:rgba(18,58,138,.35);
+      color:var(--blue);
+    }
+
+    .count{
+      color:var(--muted);
+      font-weight:800;
+      font-size:14px;
+      margin-top:6px;
+    }
+
+    /* Grid membres */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .member{
+      border-radius:18px;
+      background:linear-gradient(180deg,#f9f9f9,#ffffff);
+      box-shadow:0 10px 25px rgba(0,0,0,.05);
+      overflow:hidden;
+      transition:transform .2s ease, box-shadow .2s ease;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      border:1px solid #eef2f7;
+    }
+
+    .member:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(0,0,0,.08);
+    }
+
+    .member-top{
+      display:grid;
+      grid-template-columns:128px 1fr;
+      gap:16px;
+      padding:18px 18px 0;
+      align-items:center;
+    }
+
+    /* PHOTO PLUS GRANDE ET LISIBLE */
+    .avatar{
+      width:128px;
+      height:128px;
+      border-radius:20px;
+      overflow:hidden;
+      background:#0b1b2a;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:900;
+      font-size:40px;
+      letter-spacing:.5px;
+      box-shadow:0 12px 25px rgba(0,0,0,.15);
+      position:relative;
+    }
+
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .member-head{
+      display:grid;
+      gap:8px;
+      min-width:0;
+    }
+
+    .member-name{
+      font-size:18px;
+      font-weight:900;
+      color:var(--ink);
+      line-height:1.25;
+      text-transform:uppercase;
+      word-break:break-word;
+    }
+
+    .member-poste{
+      font-size:15px;
+      font-weight:800;
+      color:#1f2937;
+      line-height:1.35;
+      word-break:break-word;
+    }
+
+    .badges{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      width:max-content;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#eef2ff;
+      color:var(--blue);
+      font-weight:900;
+      font-size:13px;
+    }
+
+    .rank{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      width:max-content;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(244,196,48,.16);
+      color:#7a5a00;
+      font-weight:900;
+      font-size:13px;
+      border:1px solid rgba(244,196,48,.35);
+    }
+
+    .member-body{
+      padding:14px 18px 16px;
+      display:grid;
+      gap:10px;
+      flex:1;
+    }
+
+    .member-bio{
+      color:#374151;
+      font-size:15.5px;
+      line-height:1.75;
+      font-weight:600;
+    }
+
+    .meta{
+      display:grid;
+      gap:10px;
+      margin-top:2px;
+    }
+
+    .meta a{
+      text-decoration:none;
+      font-weight:900;
+      color:#111827;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      width:max-content;
+      padding:10px 12px;
+      border-radius:14px;
+      background:#f8fafc;
+      border:1px solid #eef2f7;
+      transition:transform .15s ease, box-shadow .15s ease;
+      font-size:14px;
+    }
+
+    .meta a:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    .muted{
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .loading, .error{
+      text-align:center;
+      color:#1f2937;
+      font-weight:900;
+      padding:22px;
+      background:#f8fafc;
+      border:1px solid #eef2f7;
+      border-radius:16px;
+      margin-top:12px;
+    }
+
+    footer{
+      background:linear-gradient(90deg,var(--blue),var(--dark));
+      color:white;
+      padding:50px 20px;
+      text-align:center;
+    }
+
+    footer p{
+      opacity:.95
+    }
+
+    /* Responsive */
+    @media(max-width:900px){
+      nav{
+        position:absolute;
+        top:78px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        display:none;
+        box-shadow:0 10px 30px rgba(0,0,0,.1);
+      }
+
+      nav.active{ display:flex; }
+
+      nav a{
+        margin:16px 0;
+        font-size:19px;
+      }
+
+      .menu-toggle{ display:block; }
+
+      .hero{
+        height:52vh;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:17px;
+      }
+
+      .section-card{
+        padding:40px 25px;
+      }
+
+      .section-card h2{
+        font-size:30px;
+      }
+
+      .member-top{
+        grid-template-columns:110px 1fr;
+      }
+
+      .avatar{
+        width:110px;
+        height:110px;
+        border-radius:18px;
+        font-size:34px;
+      }
+    }
+
+    @media(max-width:520px){
+      .member-top{
+        grid-template-columns:1fr;
+        text-align:left;
+      }
+
+      .avatar{
+        width:100%;
+        height:220px; /* Très lisible sur mobile */
+        border-radius:18px;
+        font-size:48px;
+      }
+
+      .member-name{
+        font-size:17px;
+      }
+    }
+
+    /* Accessibilité */
+    @media (prefers-reduced-motion: reduce) {
+      .section-card,
+      .member,
+      .chip,
+      .meta a {
+        transition:none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="logo.png" alt="Logo Mairie des Jeunes de Djougou">
+      <span>Mairie des Jeunes de Djougou</span>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="projets.html">Projets</a>
+      <a href="equipe.html" class="active">Équipe</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="don.html">Don</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO IMAGE -->
+<section class="hero" aria-label="Équipe">
+  <div>
+    <h1>Notre équipe</h1>
+    <p>
+      Découvrez les membres de la Mairie des Jeunes de Djougou : Direction, Bureau et Membres actifs.
+      Les informations sont mises à jour automatiquement depuis Google Sheet.
+    </p>
+
+    <div class="hero-badges" aria-label="Catégories">
+      <span>Direction • Bureau</span>
+      <span>Membres actifs</span>
+      <span>Recherche • Filtres</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section class="section-card">
+    <h2>👥 Membres</h2>
+    <p>
+      Recherchez un membre par <strong>nom</strong> ou <strong>poste</strong>, et utilisez les filtres
+      pour afficher rapidement la <strong>Direction</strong>, le <strong>Bureau</strong> ou les <strong>Membres actifs</strong>.
+    </p>
+
+    <div class="controls" aria-label="Contrôles d’affichage">
+      <div class="search-row">
+        <input id="searchInput" class="search" type="search" placeholder="Rechercher : nom, poste..." aria-label="Rechercher un membre">
+      </div>
+
+      <div class="chips" role="tablist" aria-label="Filtres">
+        <span class="chip active" data-filter="all" role="tab" aria-selected="true">Tous</span>
+        <span class="chip" data-filter="Bureau" role="tab" aria-selected="false">Bureau</span>
+        <span class="chip" data-filter="Direction" role="tab" aria-selected="false">Direction</span>
+        <span class="chip" data-filter="Membres actifs" role="tab" aria-selected="false">Membres actifs</span>
+      </div>
+
+      <div class="count" id="countInfo">Chargement…</div>
+    </div>
+
+    <div id="stateBox" class="loading">Chargement des membres…</div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Mairie des Jeunes de Djougou — Tous droits réservés</p>
+  <p style="margin-top:10px;font-size:14px;opacity:.88">
+    Site conçu et développé par <strong>Dine (DineTech)</strong>
+  </p>
+</footer>
+
+<script>
+  function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+  }
+
+  // Animation au scroll (signature MDJ)
+  const cards = document.querySelectorAll(".section-card");
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting) e.target.classList.add("in-view");
+    });
+  }, { threshold: 0.12 });
+  cards.forEach(c=>io.observe(c));
+
+  // ===========================
+  // CONFIG CSV (Google Sheet)
+  // ===========================
+  const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRAd5MCNdg0Bp1pYcn5bnQsw2-iqanAHbqdgn0FaG6wy2DCQygw1cIcvxaffTlXa83KAyY0Dv6fAmWc/pub?gid=0&single=true&output=csv";
+
+  // ===========================
+  // Helpers
+  // ===========================
+  function safeText(v){
+    return (v ?? "").toString().trim();
+  }
+
+  function toNumber(v){
+    const n = Number(String(v ?? "").replace(",", "."));
+    return Number.isFinite(n) ? n : 999999;
+  }
+
+  function normalize(s){
+    return safeText(s).toLowerCase();
+  }
+
+  function getInitials(name){
+    const clean = safeText(name).replace(/\s+/g," ").trim();
+    if(!clean) return "MDJ";
+    const parts = clean.split(" ").filter(Boolean);
+    const first = parts[0]?.[0] || "";
+    const last = parts.length > 1 ? parts[parts.length - 1][0] : (parts[0]?.[1] || "");
+    return (first + last).toUpperCase();
+  }
+
+  function csvToRows(csv){
+    // Parser CSV simple (gère les guillemets)
+    const rows = [];
+    let row = [];
+    let cur = "";
+    let inQuotes = false;
+
+    for(let i=0;i<csv.length;i++){
+      const ch = csv[i];
+      const next = csv[i+1];
+
+      if(ch === '"' && inQuotes && next === '"'){
+        cur += '"';
+        i++;
+        continue;
+      }
+
+      if(ch === '"'){
+        inQuotes = !inQuotes;
+        continue;
+      }
+
+      if(ch === "," && !inQuotes){
+        row.push(cur);
+        cur = "";
+        continue;
+      }
+
+      if((ch === "\n" || ch === "\r") && !inQuotes){
+        if(ch === "\r" && next === "\n") i++;
+        row.push(cur);
+        rows.push(row);
+        row = [];
+        cur = "";
+        continue;
+      }
+
+      cur += ch;
+    }
+
+    // last
+    if(cur.length || row.length){
+      row.push(cur);
+      rows.push(row);
+    }
+
+    return rows;
+  }
+
+  function rowsToObjects(rows){
+    if(!rows.length) return [];
+    const headers = rows[0].map(h => safeText(h));
+    const out = [];
+
+    for(let i=1;i<rows.length;i++){
+      const r = rows[i];
+      if(!r || !r.length) continue;
+
+      const obj = {};
+      headers.forEach((h, idx) => obj[h] = safeText(r[idx]));
+      // Ignore lignes vides
+      if(Object.values(obj).every(v => !safeText(v))) continue;
+
+      out.push(obj);
+    }
+    return out;
+  }
+
+  function makeRoleBadge(poste){
+    const p = normalize(poste);
+
+    // Badges demandés
+    if(p.includes("maire des jeunes") || p.includes("président") || p.includes("president")){
+      return `<span class="rank">👑 Président</span>`;
+    }
+    if(p.includes("1er adjoint") || p.includes("1er-adjoint") || p.includes("premier adjoint")){
+      return `<span class="rank">🥇 1er adjoint</span>`;
+    }
+    if(p.includes("2e adjoint") || p.includes("2ème adjoint") || p.includes("2e-adjoint") || p.includes("deuxième adjoint")){
+      return `<span class="rank">🥈 2e adjoint</span>`;
+    }
+    return "";
+  }
+
+  function mailLink(email){
+    const e = safeText(email);
+    if(!e) return "";
+    return `<a href="mailto:${e}" aria-label="Envoyer un email">✉️ Email</a>`;
+  }
+
+  function phoneLink(phone){
+    const p = safeText(phone).replace(/\s+/g,"");
+    if(!p) return "";
+    return `<a href="tel:${p}" aria-label="Appeler">📞 Téléphone</a>`;
+  }
+
+  function buildMemberCard(m){
+    const nom = safeText(m.nom);
+    const poste = safeText(m.poste);
+    const photo = safeText(m.photo);
+    const telephone = safeText(m.telephone);
+    const email = safeText(m.email);
+    const bio = safeText(m.bio) || "—";
+    const tag = safeText(m.tag) || "Membres actifs";
+
+    const initials = getInitials(nom);
+    const roleBadge = makeRoleBadge(poste);
+
+    // Avatar : si photo vide -> initiales
+    // Si photo existe mais échoue -> on cache l'image et on affiche les initiales
+    const avatarHtml = photo
+      ? `
+        <div class="avatar" data-initials="${initials}">
+          <img src="${photo}" alt="Photo de ${nom}" loading="lazy" onerror="this.remove(); this.parentElement.textContent=this.parentElement.getAttribute('data-initials');" />
+        </div>
+      `
+      : `<div class="avatar" aria-label="Initiales">${initials}</div>`;
+
+    const metaLinks = [
+      phoneLink(telephone),
+      mailLink(email)
+    ].filter(Boolean).join("");
+
+    const metaBlock = metaLinks
+      ? `<div class="meta">${metaLinks}</div>`
+      : `<div class="muted">Contact non renseigné</div>`;
+
+    return `
+      <article class="member" data-tag="${tag}" data-search="${normalize(nom)} ${normalize(poste)}">
+        <div class="member-top">
+          ${avatarHtml}
+          <div class="member-head">
+            <div class="member-name">${nom || "—"}</div>
+            <div class="member-poste">${poste || "—"}</div>
+            <div class="badges">
+              <span class="tag">🏷️ ${tag}</span>
+              ${roleBadge}
+            </div>
+          </div>
+        </div>
+
+        <div class="member-body">
+          <div class="member-bio">${bio}</div>
+          ${metaBlock}
+        </div>
+      </article>
+    `;
+  }
+
+  // ===========================
+  // State + Render
+  // ===========================
+  const grid = document.getElementById("grid");
+  const stateBox = document.getElementById("stateBox");
+  const countInfo = document.getElementById("countInfo");
+  const searchInput = document.getElementById("searchInput");
+  const chips = document.querySelectorAll(".chip");
+
+  let allMembers = [];
+  let activeTag = "all";
+  let query = "";
+
+  function setState(type, text){
+    stateBox.className = type;
+    stateBox.textContent = text;
+    stateBox.style.display = "block";
+  }
+
+  function hideState(){
+    stateBox.style.display = "none";
+  }
+
+  function applyFilters(){
+    const q = normalize(query);
+    const filtered = allMembers.filter(m => {
+      const tagOk = (activeTag === "all") || (safeText(m.tag) === activeTag);
+      const text = `${normalize(m.nom)} ${normalize(m.poste)}`;
+      const qOk = !q || text.includes(q);
+      return tagOk && qOk;
+    });
+
+    render(filtered);
+  }
+
+  function render(list){
+    if(!list.length){
+      grid.innerHTML = "";
+      setState("error", "Aucun membre trouvé avec ces critères.");
+      countInfo.textContent = "0 membre affiché";
+      return;
+    }
+
+    hideState();
+
+    grid.innerHTML = list.map(buildMemberCard).join("");
+
+    // compteur
+    const total = allMembers.length;
+    const shown = list.length;
+    countInfo.textContent = `${shown} membre${shown>1?"s":""} affiché${shown>1?"s":""} • ${total} au total`;
+  }
+
+  // ===========================
+  // Fetch CSV
+  // ===========================
+  async function loadCSV(){
+    try{
+      setState("loading", "Chargement des membres…");
+      const res = await fetch(CSV_URL, { cache: "no-store" });
+      if(!res.ok) throw new Error("CSV non accessible");
+
+      const csv = await res.text();
+      const rows = csvToRows(csv);
+      const objs = rowsToObjects(rows);
+
+      // Normalisation colonnes attendues
+      const mapped = objs.map(o => ({
+        nom: o.nom || o.Nom || o.name || "",
+        poste: o.poste || o.Poste || o.role || "",
+        photo: o.photo || o.Photo || o.image || "",
+        telephone: o.telephone || o.téléphone || o.tel || o.phone || "",
+        email: o.email || o.Email || "",
+        bio: o.bio || o.Bio || "",
+        ordre: o.ordre || o.Ordre || "",
+        tag: o.tag || o.Tag || "Membres actifs"
+      }));
+
+      // Tri par ordre (automatique)
+      mapped.sort((a,b) => toNumber(a.ordre) - toNumber(b.ordre));
+
+      allMembers = mapped;
+
+      applyFilters();
+    }catch(err){
+      grid.innerHTML = "";
+      setState("error", "Impossible de charger l’équipe pour le moment. Vérifie le lien CSV ou ta connexion.");
+      countInfo.textContent = "Erreur de chargement";
+      console.error(err);
+    }
+  }
+
+  // ===========================
+  // Events (chips + search)
+  // ===========================
+  chips.forEach(chip=>{
+    chip.addEventListener("click", ()=>{
+      chips.forEach(c=>{
+        c.classList.remove("active");
+        c.setAttribute("aria-selected","false");
+      });
+      chip.classList.add("active");
+      chip.setAttribute("aria-selected","true");
+
+      activeTag = chip.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener("input", (e)=>{
+    query = e.target.value || "";
+    applyFilters();
+  });
+
+  // Go
+  loadCSV();
+</script>
+
+</body>
+</html>
