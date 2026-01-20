@@ -1,0 +1,1280 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <!-- ============================================ -->
+  <!-- SEO ULTRA PRO — MAIRIE DES JEUNES DE DJOUGOU -->
+  <!-- PAGE : ACTUALITÉS & COMMUNIQUÉS             -->
+  <!-- ============================================ -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Actualités | Mairie des Jeunes de Djougou</title>
+  <meta name="description" content="Suivez les actualités, actions, communiqués et initiatives de la Mairie des Jeunes de Djougou. Informations mises à jour automatiquement." />
+  <meta name="keywords" content="Mairie des Jeunes de Djougou, Actualités, Communiqués, Actions, Jeunesse, Djougou, Bénin, Initiatives, Projets" />
+  <meta name="author" content="Mairie des Jeunes de Djougou" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- CANONICAL (mets ton domaine final ici quand prêt) -->
+  <link rel="canonical" href="https://mdj-djougou.vercel.app/actualites.html" />
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mairie des Jeunes de Djougou" />
+  <meta property="og:title" content="Actualités | Mairie des Jeunes de Djougou" />
+  <meta property="og:description" content="Actions, communiqués et initiatives de la Mairie des Jeunes de Djougou. Mise à jour automatique." />
+  <meta property="og:url" content="https://mdj-djougou.vercel.app/actualites.html" />
+  <meta property="og:image" content="https://mdj-djougou.vercel.app/logo.png" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Actualités | Mairie des Jeunes de Djougou" />
+  <meta name="twitter:description" content="Actions, communiqués et initiatives de la Mairie des Jeunes de Djougou. Mise à jour automatique." />
+  <meta name="twitter:image" content="https://mdj-djougou.vercel.app/logo.png" />
+
+  <!-- SCHEMA.ORG (Site/Organisation) -->
+  <script type="application/ld+json" id="schema-base">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "name":"Mairie des Jeunes de Djougou",
+        "url":"https://mdj-djougou.vercel.app/",
+        "logo":"https://mdj-djougou.vercel.app/logo.png",
+        "areaServed":{"@type":"City","name":"Djougou"},
+        "address":{"@type":"PostalAddress","addressLocality":"Djougou","addressCountry":"BJ"},
+        "sameAs":[
+          "https://www.facebook.com/profile.php?id=61584654191079"
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "name":"Mairie des Jeunes de Djougou",
+        "url":"https://mdj-djougou.vercel.app/"
+      },
+      {
+        "@type":"WebPage",
+        "name":"Actualités",
+        "url":"https://mdj-djougou.vercel.app/actualites.html",
+        "isPartOf":{"@type":"WebSite","url":"https://mdj-djougou.vercel.app/"}
+      }
+    ]
+  }
+  </script>
+
+  <!-- ========= STYLE MDJ (même énergie) ========= -->
+  <style>
+    :root{
+      --green:#0b7a55;
+      --yellow:#f4c430;
+      --red:#c62828;
+      --dark:#0b1220;
+      --bodybg:#eef2f5;
+      --blue:#123a8a;
+
+      --card:#ffffff;
+      --muted:#6b7280;
+      --ink:#111827;
+      --line:#e5e7eb;
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:"Segoe UI",Arial,sans-serif; }
+    body{ background:linear-gradient(135deg,#f1f5f9,#e2e8f0); color:#222; line-height:1.7; }
+
+    header{
+      position:fixed; top:0; width:100%;
+      background:rgba(255,255,255,.97);
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      z-index:1000;
+    }
+
+    .nav{
+      max-width:1200px; margin:auto;
+      font-weight:600; font-size:18px;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:16px 20px;
+    }
+
+    .logo{ display:flex; align-items:center; gap:12px; min-width:0; }
+    .logo img{ height:50px; }
+    .logo span{ font-weight:800; color:var(--blue); font-size:20px; }
+
+    nav{ display:flex; align-items:center; }
+    nav a{
+      margin:0 14px; text-decoration:none; color:#333;
+      font-weight:600; font-size:18px; position:relative;
+    }
+    nav a::after{
+      content:""; position:absolute; bottom:-6px; left:0;
+      width:0; height:2px; background:var(--blue); transition:.3s;
+    }
+    nav a:hover::after{ width:100%; }
+    nav a.active{ color:var(--blue); }
+    nav a.active::after{ width:100%; }
+
+    .menu-toggle{ display:none; font-size:34px; cursor:pointer; }
+
+    /* HERO */
+    .hero{
+      height:55vh;
+      background:
+        linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),
+        url('fond-actualites.jpg') center/cover no-repeat;
+      display:flex; align-items:center; justify-content:center;
+      text-align:center; color:#fff; padding:20px;
+      margin-top:78px;
+    }
+    .hero h1{ font-size:46px; max-width:980px; margin:auto; font-weight:900; }
+    .hero p{
+      margin-top:18px; font-size:19px; line-height:1.85;
+      max-width:920px; margin-left:auto; margin-right:auto; opacity:.96;
+    }
+    .hero-badges{
+      margin-top:16px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+    }
+    .hero-badges span{
+      padding:8px 14px; border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:700; font-size:14px;
+    }
+
+    main{
+      max-width:1200px; margin:auto;
+      padding:45px 20px 80px;
+      display:grid; gap:70px;
+    }
+
+    .section-card{
+      background:var(--card);
+      padding:60px;
+      border-radius:22px;
+      box-shadow:0 15px 40px rgba(0,0,0,.08);
+      position:relative;
+      overflow:hidden;
+
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .6s ease, transform .6s ease;
+    }
+    .section-card.in-view{ opacity:1; transform:none; }
+    .section-card::before{
+      content:""; position:absolute; top:0; left:0;
+      width:6px; height:100%;
+      background:linear-gradient(var(--blue),var(--green),var(--yellow));
+    }
+
+    .section-card h2{
+      text-align:center; color:var(--blue);
+      margin-bottom:20px; font-size:36px;
+    }
+    .section-card p{
+      margin-bottom:18px;
+      font-size:18px; line-height:1.9; color:#1f2937;
+    }
+
+    /* Controls (recherche + filtres) */
+    .controls{ display:grid; gap:14px; margin-top:10px; }
+    .search{
+      width:100%;
+      border:1px solid var(--line);
+      background:#f8fafc;
+      border-radius:16px;
+      padding:14px 16px;
+      font-size:16px;
+      font-weight:700;
+      outline:none;
+    }
+    .search:focus{
+      border-color:rgba(18,58,138,.45);
+      box-shadow:0 0 0 4px rgba(18,58,138,.12);
+      background:#fff;
+    }
+
+    .chips{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-start;
+    }
+    .chip{
+      border:1px solid var(--line);
+      background:#f8fafc;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:14px;
+      cursor:pointer;
+      user-select:none;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .chip:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+    .chip.active{
+      background:rgba(18,58,138,.10);
+      border-color:rgba(18,58,138,.35);
+      color:var(--blue);
+    }
+
+    .count{
+      color:var(--muted);
+      font-weight:900;
+      font-size:14px;
+      margin-top:6px;
+    }
+
+    /* Sections */
+    .label-row{
+      display:flex; align-items:center; gap:10px;
+      margin-bottom:14px;
+    }
+    .label-pill{
+      display:inline-flex; align-items:center; gap:10px;
+      width:max-content;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(18,58,138,.10);
+      border:1px solid rgba(18,58,138,.25);
+      color:var(--blue);
+      font-weight:900;
+      font-size:14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:var(--green);
+      box-shadow:0 0 0 6px rgba(11,122,85,.12);
+    }
+
+    /* Grid cartes */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+      gap:18px;
+      margin-top:10px;
+    }
+
+    .news-card{
+      border-radius:18px;
+      background:linear-gradient(180deg,#f9f9f9,#ffffff);
+      box-shadow:0 10px 25px rgba(0,0,0,.05);
+      overflow:hidden;
+      border:1px solid #eef2f7;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .news-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 35px rgba(0,0,0,.08);
+    }
+
+    .news-media{
+      height:190px;
+      background:#0b1b2a;
+      position:relative;
+      overflow:hidden;
+    }
+    .news-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.02);
+    }
+
+    .news-body{
+      padding:18px 18px 14px;
+      display:grid;
+      gap:10px;
+      flex:1;
+    }
+
+    .meta-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .badge-cat{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      width:max-content;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#eef2ff;
+      color:var(--blue);
+      font-weight:900;
+      font-size:13px;
+    }
+
+    .badge-date{
+      color:#6b7280;
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .news-title{
+      font-size:18px;
+      font-weight:1000;
+      color:#111827;
+      line-height:1.35;
+    }
+
+    .news-excerpt{
+      font-size:15.5px;
+      line-height:1.75;
+      color:#374151;
+      font-weight:600;
+    }
+
+    .tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:2px;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      width:max-content;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(244,196,48,.16);
+      color:#7a5a00;
+      font-weight:900;
+      font-size:12.5px;
+      border:1px solid rgba(244,196,48,.35);
+    }
+
+    .news-actions{
+      padding:0 18px 18px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-start;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:1000;
+      font-size:14px;
+      cursor:pointer;
+      user-select:none;
+      border:none;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 25px rgba(0,0,0,.12);
+    }
+    .btn-primary{
+      background:linear-gradient(90deg,var(--yellow),#ffe27a);
+      color:#000;
+    }
+    .btn-ghost{
+      background:#0b1b2a;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .btn-outline{
+      border:2px solid rgba(18,58,138,.55);
+      color:var(--blue);
+      background:#fff;
+    }
+
+    .loading, .error{
+      text-align:center;
+      color:#1f2937;
+      font-weight:1000;
+      padding:22px;
+      background:#f8fafc;
+      border:1px solid #eef2f7;
+      border-radius:16px;
+      margin-top:12px;
+    }
+
+    /* MODAL LIRE */
+    .modal{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      z-index:2000;
+      background:rgba(0,0,0,.62);
+      backdrop-filter: blur(6px);
+    }
+    .modal.open{ display:flex; }
+
+    .modal-card{
+      width:min(1040px,100%);
+      max-height:92vh;
+      overflow:auto;
+      border-radius:22px;
+      background:linear-gradient(180deg,#0a0f1d,#0b1b2a);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 30px 80px rgba(0,0,0,.45);
+      position:relative;
+    }
+
+    .modal-inner{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:18px;
+      padding:18px;
+    }
+
+    .modal-media{
+      border-radius:18px;
+      overflow:hidden;
+      background:#0b1b2a;
+      border:1px solid rgba(255,255,255,.10);
+      min-height:420px;
+    }
+    .modal-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .modal-content{
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      padding:18px;
+      display:grid;
+      gap:12px;
+      align-content:start;
+    }
+
+    .modal-topline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:2px;
+    }
+
+    .modal-cat{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      width:max-content;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      font-weight:1000;
+      font-size:13px;
+    }
+
+    .modal-date{
+      color:rgba(255,255,255,.78);
+      font-weight:1000;
+      font-size:13px;
+    }
+
+    .modal-title{
+      font-size:22px;
+      line-height:1.25;
+      font-weight:1000;
+    }
+
+    .modal-text{
+      color:rgba(255,255,255,.86);
+      font-size:15.5px;
+      line-height:1.85;
+      font-weight:650;
+      white-space:pre-wrap;
+    }
+
+    .modal-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:6px;
+    }
+
+    .modal-close{
+      position:absolute;
+      top:12px;
+      right:12px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:1000;
+      cursor:pointer;
+    }
+
+    footer{
+      background:linear-gradient(90deg,var(--blue),var(--dark));
+      color:white;
+      padding:50px 20px;
+      text-align:center;
+    }
+    footer p{ opacity:.95; }
+
+    /* Responsive */
+    @media(max-width:900px){
+      header{ position:sticky; top:0; }
+
+      nav{
+        position:absolute;
+        top:78px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        display:none;
+        box-shadow:0 10px 30px rgba(0,0,0,.1);
+      }
+      nav.active{ display:flex; }
+      nav a{ margin:16px 0; font-size:19px; }
+      .menu-toggle{ display:block; }
+
+      .hero{
+        margin-top:0 !important;
+        height:auto;
+        min-height:52vh;
+        padding:40px 18px;
+      }
+      .hero h1{ font-size:34px; line-height:1.15; }
+      .hero p{ font-size:17px; line-height:1.75; }
+      .hero-badges span{ font-size:13px; padding:8px 12px; }
+
+      .section-card{ padding:40px 25px; }
+      .section-card h2{ font-size:30px; }
+
+      .modal-inner{ grid-template-columns:1fr; }
+      .modal-media{ min-height:260px; }
+      .modal-title{ font-size:20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .section-card,
+      .news-card,
+      .chip,
+      .btn{
+        transition:none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="logo.png" alt="Logo de la Mairie des Jeunes de Djougou">
+      <span>Mairie des Jeunes de Djougou</span>
+    </div>
+
+    <div class="menu-toggle" id="navBtn" aria-label="Ouvrir le menu" aria-expanded="false">☰</div>
+
+    <nav id="navMenu">
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="projets.html">Projets</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="actualites.html" class="active">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="don.html">Don</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Actualités</h1>
+    <p>Découvrez nos dernières activités, annonces, partenariats et résultats sur le terrain.</p>
+    <div class="hero-badges">
+      <span>Dernières nouvelles • Actions • Communiqués</span>
+      <span>Recherche • Filtres • Partage</span>
+      <span>Mise à jour automatique via Google Sheet</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section class="section-card">
+    <h2><span>📰</span>Suivre nos actualités</h2>
+    <p>
+      Cette page regroupe l’ensemble des informations officielles, communiqués, actions citoyennes et initiatives menées
+      par la Mairie des Jeunes de Djougou. Les contenus sont mis à jour automatiquement.
+    </p>
+
+    <div class="controls">
+      <input id="searchInput" class="search" type="search" placeholder="Rechercher : titre, catégorie, mot-clé..." autocomplete="off">
+      <div class="chips" id="chips"></div>
+      <div class="count" id="count">Chargement…</div>
+    </div>
+
+    <div id="status" class="loading">Chargement des actualités depuis Google Sheet…</div>
+  </section>
+
+  <section class="section-card" id="featuredSection" style="display:none;">
+    <div class="label-row">
+      <span class="label-pill"><span class="dot"></span>À la une</span>
+      <span class="count" id="featuredCount"></span>
+    </div>
+    <div class="grid" id="featuredGrid"></div>
+  </section>
+
+  <section class="section-card">
+    <div class="label-row">
+      <span class="label-pill"><span class="dot"></span>Toutes les actualités</span>
+      <span class="count" id="allCount"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Mairie des Jeunes de Djougou — Tous droits réservés</p>
+  <p style="margin-top:10px;opacity:.9;font-weight:700;">Site conçu par <strong>Dine</strong></p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose">Fermer</button>
+
+    <div class="modal-inner">
+      <div class="modal-media">
+        <img id="modalImg" alt="">
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-topline">
+          <div class="modal-cat" id="modalCat"></div>
+          <div class="modal-date" id="modalDate"></div>
+        </div>
+
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-text" id="modalText"></div>
+
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="btnLire" style="display:none;">Lire</button>
+          <a class="btn btn-ghost" id="btnWhatsapp" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" id="btnFacebook" target="_blank" rel="noopener">Facebook</a>
+          <button class="btn btn-ghost" id="btnCopy">Copier le lien</button>
+          <a class="btn btn-outline" id="btnSupport" href="don.html">Soutenir cette action</a>
+        </div>
+
+        <div class="count" id="copyHint" style="display:none;color:rgba(255,255,255,.75);font-weight:900;">
+          Lien copié ✅
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =========================
+   CONFIG
+========================= */
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRAd5MCNdg0Bp1pYcn5bnQsw2-iqanAHbqdgn0FaG6wy2DCQygw1cIcvxaffTlXa83KAyY0Dv6fAmWc/pub?gid=1341329862&single=true&output=csv";
+
+/* IMPORTANT : mets ton domaine final ici quand tu achètes mairiedesjeunesdjougou.org */
+const SITE_ORIGIN = "https://mdj-djougou.vercel.app";
+const PAGE_PATH = "/actualites.html";
+
+const year = document.getElementById("year");
+if (year) year.textContent = String(new Date().getFullYear());
+
+/* =========================
+   NAV MOBILE
+========================= */
+(() => {
+  const navBtn = document.getElementById("navBtn");
+  const navMenu = document.getElementById("navMenu");
+  if (navBtn && navMenu) {
+    navBtn.addEventListener("click", () => {
+      const open = navMenu.classList.toggle("active");
+      navBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    // Fermer menu mobile au clic
+    navMenu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        navBtn.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+})();
+
+/* =========================
+   ANIMATION AU SCROLL
+========================= */
+(() => {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add("in-view");
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".section-card").forEach(s => obs.observe(s));
+})();
+
+/* =========================
+   CSV PARSER (robuste)
+========================= */
+function parseCSV(text){
+  const rows = [];
+  let row = [];
+  let cur = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    const next = text[i + 1];
+
+    if (c === '"' ) {
+      if (inQuotes && next === '"') { cur += '"'; i++; }
+      else { inQuotes = !inQuotes; }
+    } else if (c === "," && !inQuotes) {
+      row.push(cur); cur = "";
+    } else if ((c === "\n" || c === "\r") && !inQuotes) {
+      if (c === "\r" && next === "\n") i++;
+      row.push(cur); cur = "";
+      if (row.length > 1 || row[0] !== "") rows.push(row);
+      row = [];
+    } else {
+      cur += c;
+    }
+  }
+  row.push(cur);
+  if (row.length > 1 || row[0] !== "") rows.push(row);
+
+  const header = rows.shift()?.map(h => (h || "").trim().toLowerCase()) || [];
+  return rows.map(r => {
+    const obj = {};
+    header.forEach((h, idx) => obj[h] = (r[idx] || "").trim());
+    return obj;
+  });
+}
+
+/* =========================
+   HELPERS
+========================= */
+function toSlug(s){
+  return (s || "")
+    .toString()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/(^-|-$)/g,"")
+    .slice(0, 80);
+}
+
+function truncate(txt, n){
+  const t = (txt || "").replace(/\s+/g," ").trim();
+  if (t.length <= n) return t;
+  return t.slice(0, n).trim() + "…";
+}
+
+function parseDateFR(s){
+  // attend "dd/mm/yyyy"
+  const m = (s || "").match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (!m) return null;
+  const d = Number(m[1]), mo = Number(m[2]) - 1, y = Number(m[3]);
+  const dt = new Date(y, mo, d);
+  if (Number.isNaN(dt.getTime())) return null;
+  return dt;
+}
+
+function formatDateFR(s){
+  const dt = parseDateFR(s);
+  if (!dt) return s || "";
+  return dt.toLocaleDateString("fr-FR", { day:"2-digit", month:"2-digit", year:"numeric" });
+}
+
+function splitTags(s){
+  // tags séparés par virgule, point-virgule, ou espaces multiples
+  const raw = (s || "").replace(/\s+/g," ").trim();
+  if (!raw) return [];
+  return raw.split(/[,;]+/).map(x => x.trim()).filter(Boolean).slice(0, 6);
+}
+
+function safeImage(url){
+  const u = (url || "").trim();
+  if (!u) return "";
+  return u;
+}
+
+function buildShareUrl(slug){
+  return `${SITE_ORIGIN}${PAGE_PATH}#${encodeURIComponent(slug)}`;
+}
+
+/* =========================
+   SEO DYNAMIQUE PAR ARTICLE
+========================= */
+function setMeta(name, content){
+  if (!content) return;
+  let el = document.querySelector(`meta[name="${name}"]`);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute("name", name);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+}
+
+function setProp(property, content){
+  if (!content) return;
+  let el = document.querySelector(`meta[property="${property}"]`);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute("property", property);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+}
+
+function setCanonical(url){
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement("link");
+    link.setAttribute("rel","canonical");
+    document.head.appendChild(link);
+  }
+  link.setAttribute("href", url);
+}
+
+function setNewsSchema(article){
+  // Remplace/ajoute un schema NewsArticle quand une actu est ouverte
+  let el = document.getElementById("schema-news");
+  if (!el) {
+    el = document.createElement("script");
+    el.type = "application/ld+json";
+    el.id = "schema-news";
+    document.head.appendChild(el);
+  }
+
+  const url = buildShareUrl(article.slug);
+  const img = article.image || `${SITE_ORIGIN}/logo.png`;
+
+  const schema = {
+    "@context":"https://schema.org",
+    "@type":"NewsArticle",
+    "headline": article.titre || "Actualité",
+    "datePublished": article.isoDate || undefined,
+    "dateModified": article.isoDate || undefined,
+    "image": [img],
+    "articleSection": article.categorie || "Actualités",
+    "keywords": (article.tagsArr || []).join(", "),
+    "author": { "@type":"Organization", "name":"Mairie des Jeunes de Djougou" },
+    "publisher": {
+      "@type":"Organization",
+      "name":"Mairie des Jeunes de Djougou",
+      "logo": { "@type":"ImageObject", "url": `${SITE_ORIGIN}/logo.png` }
+    },
+    "mainEntityOfPage": { "@type":"WebPage", "@id": url }
+  };
+
+  el.textContent = JSON.stringify(schema, null, 2);
+}
+
+function applyArticleSEO(article){
+  const title = `${article.titre} | Mairie des Jeunes de Djougou`;
+  const desc = truncate(article.contenu, 180) || "Actualité de la Mairie des Jeunes de Djougou.";
+  const url = buildShareUrl(article.slug);
+  const img = article.image || `${SITE_ORIGIN}/logo.png`;
+
+  document.title = title;
+
+  setMeta("description", desc);
+  setMeta("keywords", `${article.categorie || "Actualités"}, ${article.tagsArr?.join(", ") || ""}, Mairie des Jeunes de Djougou, Djougou, Bénin`.trim());
+
+  setProp("og:title", title);
+  setProp("og:description", desc);
+  setProp("og:url", url);
+  setProp("og:image", img);
+
+  setMeta("twitter:title", title);
+  setMeta("twitter:description", desc);
+  setMeta("twitter:image", img);
+
+  setCanonical(url);
+
+  setNewsSchema(article);
+}
+
+function resetPageSEO(){
+  document.title = "Actualités | Mairie des Jeunes de Djougou";
+  setMeta("description", "Suivez les actualités, actions, communiqués et initiatives de la Mairie des Jeunes de Djougou. Informations mises à jour automatiquement.");
+  setProp("og:title", "Actualités | Mairie des Jeunes de Djougou");
+  setProp("og:description", "Actions, communiqués et initiatives de la Mairie des Jeunes de Djougou. Mise à jour automatique.");
+  setProp("og:url", `${SITE_ORIGIN}${PAGE_PATH}`);
+  setProp("og:image", `${SITE_ORIGIN}/logo.png`);
+  setMeta("twitter:title", "Actualités | Mairie des Jeunes de Djougou");
+  setMeta("twitter:description", "Actions, communiqués et initiatives de la Mairie des Jeunes de Djougou. Mise à jour automatique.");
+  setMeta("twitter:image", `${SITE_ORIGIN}/logo.png`);
+  setCanonical(`${SITE_ORIGIN}${PAGE_PATH}`);
+
+  // On laisse schema-news présent si déjà créé, mais on le vide pour éviter confusion
+  const el = document.getElementById("schema-news");
+  if (el) el.textContent = "";
+}
+
+/* =========================
+   RENDER
+========================= */
+const statusEl = document.getElementById("status");
+const chipsEl = document.getElementById("chips");
+const gridEl = document.getElementById("grid");
+const featuredSection = document.getElementById("featuredSection");
+const featuredGrid = document.getElementById("featuredGrid");
+const searchInput = document.getElementById("searchInput");
+const countEl = document.getElementById("count");
+const allCount = document.getElementById("allCount");
+const featuredCount = document.getElementById("featuredCount");
+
+let allNews = [];
+let activeCategory = "Toutes";
+let query = "";
+
+function normalizeNews(raw){
+  return raw.map(item => {
+    const titre = item.titre || "";
+    const date = item.date || "";
+    const categorie = item.categorie || "Actualités";
+    const image = safeImage(item.image);
+    const contenu = item.contenu || "";
+    const tags = item.tags || "";
+    const featured = (item.featured || "").trim() === "1";
+    const slug = (item.slugs || item.slug || "").trim() || toSlug(titre);
+    const dt = parseDateFR(date);
+    const isoDate = dt ? dt.toISOString() : "";
+
+    return {
+      titre,
+      date,
+      dateFR: formatDateFR(date),
+      dateObj: dt || new Date(0),
+      isoDate,
+      categorie,
+      image,
+      contenu,
+      excerpt: truncate(contenu, 160),
+      featured,
+      tagsArr: splitTags(tags),
+      slug
+    };
+  })
+  .filter(x => x.titre || x.contenu)
+  .sort((a,b) => b.dateObj - a.dateObj); // plus récent -> plus ancien
+}
+
+function uniqCategories(items){
+  const set = new Set(items.map(x => (x.categorie || "Actualités").trim()).filter(Boolean));
+  return ["Toutes", ...Array.from(set).sort((a,b)=>a.localeCompare(b,"fr"))];
+}
+
+function renderChips(cats){
+  chipsEl.innerHTML = "";
+  cats.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.className = "chip" + (cat === activeCategory ? " active" : "");
+    btn.type = "button";
+    btn.textContent = cat;
+    btn.addEventListener("click", () => {
+      activeCategory = cat;
+      document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+      btn.classList.add("active");
+      render();
+    });
+    chipsEl.appendChild(btn);
+  });
+}
+
+function matchItem(item){
+  const catOk = (activeCategory === "Toutes") || (item.categorie === activeCategory);
+  if (!catOk) return false;
+
+  const q = (query || "").trim().toLowerCase();
+  if (!q) return true;
+
+  const hay = [
+    item.titre,
+    item.categorie,
+    item.contenu,
+    (item.tagsArr || []).join(" ")
+  ].join(" ").toLowerCase();
+
+  return hay.includes(q);
+}
+
+function cardHTML(item){
+  const tags = (item.tagsArr || []).slice(0, 3).map(t => `<span class="tag">${escapeHTML(t)}</span>`).join("");
+  const img = item.image ? `<img src="${escapeAttr(item.image)}" alt="${escapeAttr(item.titre)}" loading="lazy">` : `<img src="logo.png" alt="Mairie des Jeunes de Djougou" loading="lazy">`;
+
+  return `
+    <article class="news-card" data-slug="${escapeAttr(item.slug)}">
+      <div class="news-media">${img}</div>
+      <div class="news-body">
+        <div class="meta-top">
+          <div class="badge-cat">📌 ${escapeHTML(item.categorie)}</div>
+          <div class="badge-date">${escapeHTML(item.dateFR || item.date)}</div>
+        </div>
+        <div class="news-title">${escapeHTML(item.titre)}</div>
+        <div class="news-excerpt">${escapeHTML(item.excerpt)}</div>
+        ${tags ? `<div class="tags">${tags}</div>` : ``}
+      </div>
+      <div class="news-actions">
+        <button class="btn btn-primary" data-action="read">Lire</button>
+        <button class="btn btn-ghost" data-action="share">Partager</button>
+        <a class="btn btn-outline" data-action="support" href="don.html">Soutenir</a>
+      </div>
+    </article>
+  `;
+}
+
+function escapeHTML(s){
+  return (s || "").replace(/[&<>"']/g, (c) => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
+function escapeAttr(s){
+  return escapeHTML(s).replace(/"/g, "&quot;");
+}
+
+function render(){
+  const filtered = allNews.filter(matchItem);
+  countEl.textContent = `${filtered.length} actualité(s) affichée(s).`;
+
+  // Featured
+  const featured = filtered.filter(x => x.featured);
+  if (featured.length > 0) {
+    featuredSection.style.display = "";
+    featuredCount.textContent = `${featured.length} actualité(s) à la une.`;
+    featuredGrid.innerHTML = featured.map(cardHTML).join("");
+  } else {
+    featuredSection.style.display = "none";
+    featuredGrid.innerHTML = "";
+  }
+
+  // All (même filtrage)
+  allCount.textContent = `${filtered.length} résultat(s)`;
+  gridEl.innerHTML = filtered.map(cardHTML).join("");
+
+  // Bind actions
+  bindCards(featuredGrid);
+  bindCards(gridEl);
+}
+
+function bindCards(container){
+  container.querySelectorAll(".news-card").forEach(card => {
+    const slug = card.getAttribute("data-slug");
+
+    card.querySelectorAll("[data-action]").forEach(btn => {
+      const act = btn.getAttribute("data-action");
+
+      if (act === "read") {
+        btn.addEventListener("click", () => openBySlug(slug));
+      }
+
+      if (act === "share") {
+        btn.addEventListener("click", () => {
+          const url = buildShareUrl(slug);
+          openShareMenu(url);
+        });
+      }
+
+      if (act === "support") {
+        // Pré-remplir message vers don.html
+        const item = allNews.find(x => x.slug === slug);
+        if (item) {
+          const msg = buildDonationMessage(item);
+          btn.setAttribute("href", `don.html?message=${encodeURIComponent(msg)}&source=${encodeURIComponent(slug)}`);
+        }
+      }
+    });
+  });
+}
+
+/* =========================
+   DON MESSAGE
+========================= */
+function buildDonationMessage(item){
+  // message prêt (modifiable)
+  return `Bonjour, je souhaite soutenir l’action : "${item.titre}" (${item.categorie}, ${item.dateFR || item.date}). Je veux contribuer pour appuyer cette initiative de la Mairie des Jeunes de Djougou. Merci de me guider.`;
+}
+
+/* =========================
+   MODAL + SHARE + URL
+========================= */
+const modal = document.getElementById("modal");
+const modalClose = document.getElementById("modalClose");
+const modalImg = document.getElementById("modalImg");
+const modalCat = document.getElementById("modalCat");
+const modalDate = document.getElementById("modalDate");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
+const btnWhatsapp = document.getElementById("btnWhatsapp");
+const btnFacebook = document.getElementById("btnFacebook");
+const btnCopy = document.getElementById("btnCopy");
+const copyHint = document.getElementById("copyHint");
+const btnSupport = document.getElementById("btnSupport");
+
+function openModal(){
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+
+  // Nettoyer SEO si on ferme (retour page)
+  resetPageSEO();
+}
+
+modalClose.addEventListener("click", () => {
+  closeModal();
+  // enlever hash sans recharger
+  if (location.hash) history.replaceState({}, "", `${PAGE_PATH}`);
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+    if (location.hash) history.replaceState({}, "", `${PAGE_PATH}`);
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.classList.contains("open")) {
+    closeModal();
+    if (location.hash) history.replaceState({}, "", `${PAGE_PATH}`);
+  }
+});
+
+function openShareMenu(url){
+  // on ouvre directement le modal de lecture si possible, sinon copier
+  navigator.clipboard?.writeText(url).then(() => {
+    copyHint.style.display = "";
+    setTimeout(() => copyHint.style.display = "none", 1800);
+  }).catch(() => {});
+}
+
+btnCopy.addEventListener("click", () => {
+  const url = location.hash ? buildShareUrl(decodeURIComponent(location.hash.slice(1))) : `${SITE_ORIGIN}${PAGE_PATH}`;
+  navigator.clipboard.writeText(url).then(() => {
+    copyHint.style.display = "";
+    setTimeout(() => copyHint.style.display = "none", 1800);
+  });
+});
+
+function openBySlug(slug){
+  const item = allNews.find(x => x.slug === slug);
+  if (!item) return;
+
+  // Modal content
+  modalImg.src = item.image || "logo.png";
+  modalImg.alt = item.titre || "Actualité";
+  modalCat.textContent = item.categorie || "Actualités";
+  modalDate.textContent = item.dateFR || item.date || "";
+  modalTitle.textContent = item.titre || "";
+  modalText.textContent = item.contenu || "";
+
+  const shareUrl = buildShareUrl(item.slug);
+  btnWhatsapp.href = `https://wa.me/?text=${encodeURIComponent(item.titre + " — " + shareUrl)}`;
+  btnFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
+  const msg = buildDonationMessage(item);
+  btnSupport.href = `don.html?message=${encodeURIComponent(msg)}&source=${encodeURIComponent(item.slug)}`;
+
+  // SEO dynamique pour cette actu
+  applyArticleSEO(item);
+
+  // Ouvrir modal + hash
+  openModal();
+  history.replaceState({}, "", `${PAGE_PATH}#${encodeURIComponent(item.slug)}`);
+}
+
+/* Auto-open si URL contient #slug */
+function bootOpenFromUrl(){
+  const slug = decodeURIComponent((location.hash || "").replace("#","")).trim();
+  if (!slug) return;
+  openBySlug(slug);
+}
+
+/* =========================
+   LOAD
+========================= */
+async function load(){
+  try{
+    statusEl.className = "loading";
+    statusEl.textContent = "Chargement des actualités depuis Google Sheet…";
+
+    const res = await fetch(CSV_URL, { cache:"no-store" });
+    if (!res.ok) throw new Error("Impossible de charger le CSV.");
+
+    const text = await res.text();
+    const parsed = parseCSV(text);
+    allNews = normalizeNews(parsed);
+
+    // chips
+    const cats = uniqCategories(allNews);
+    renderChips(cats);
+
+    statusEl.style.display = "none";
+
+    render();
+
+    // open if hash
+    bootOpenFromUrl();
+
+  } catch(err){
+    statusEl.className = "error";
+    statusEl.textContent = "Erreur : impossible de charger les actualités. Vérifie le lien CSV et ta connexion.";
+    console.error(err);
+  }
+}
+
+searchInput.addEventListener("input", (e) => {
+  query = e.target.value || "";
+  render();
+});
+
+window.addEventListener("hashchange", () => {
+  const slug = decodeURIComponent((location.hash || "").replace("#","")).trim();
+  if (slug) openBySlug(slug);
+});
+
+load();
+</script>
+
+</body>
+</html>
