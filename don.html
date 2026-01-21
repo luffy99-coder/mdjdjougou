@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Faire un don | Mairie des Jeunes de Djougou (Bénin) — Soutenir une action</title>
+  <meta name="description" content="Soutenez les actions de la Mairie des Jeunes de Djougou : citoyenneté, environnement, inclusion, projets et initiatives terrain. Don financier, matériel ou partenariat. Message WhatsApp pré-rempli." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mairiedesjeunesdjougou.org/don.html" />
+
+   <link rel="canonical" href="https://mairiedesjeunesdjougou.org/don.html">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Mairie des Jeunes de Djougou" />
+  <meta property="og:title" content="Faire un don | Mairie des Jeunes de Djougou" />
+  <meta property="og:description" content="Soutenez une action : don financier, matériel ou partenariat. Message WhatsApp pré-rempli selon l’actualité." />
+  <meta property="og:url" content="https://mairiedesjeunesdjougou.org/don.html" />
+  <!-- Remplace par ton image si tu veux -->
+  <meta property="og:image" content="https://mairiedesjeunesdjougou.org/og-don.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Faire un don | Mairie des Jeunes de Djougou" />
+  <meta name="twitter:description" content="Soutenez une action : don financier, matériel ou partenariat. Message WhatsApp pré-rempli." />
+  <meta name="twitter:image" content="https://mairiedesjeunesdjougou.org/og-don.jpg" />
+
+  <!-- SEO local / international -->
+  <meta name="geo.region" content="BJ" />
+  <meta name="geo.placename" content="Djougou" />
+  <meta name="keywords" content="Mairie des Jeunes de Djougou, don, soutien, partenariat, Bénin, initiatives jeunesse, environnement, citoyenneté, inclusion, projets locaux, actions terrain" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Faire un don",
+    "url":"https://mairiedesjeunesdjougou.org/don.html",
+    "inLanguage":"fr",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"Mairie des Jeunes de Djougou",
+      "url":"https://mairiedesjeunesdjougou.org"
+    },
+    "about":{
+      "@type":"Organization",
+      "name":"Mairie des Jeunes de Djougou",
+      "url":"https://mairiedesjeunesdjougou.org",
+      "address":{
+        "@type":"PostalAddress",
+        "addressLocality":"Djougou",
+        "addressCountry":"BJ"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"DonateAction",
+    "name":"Soutenir une action de la Mairie des Jeunes de Djougou",
+    "target":"https://mairiedesjeunesdjougou.org/don.html",
+    "description":"Don financier, matériel/logistique ou partenariat institutionnel. Message WhatsApp pré-rempli.",
+    "agent":{
+      "@type":"Organization",
+      "name":"Mairie des Jeunes de Djougou",
+      "url":"https://mairiedesjeunesdjougou.org"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --green:#0b7a55;
+      --yellow:#f4c430;
+      --red:#c62828;
+      --dark:#0b1220;
+      --blue:#123a8a;
+
+      --card:#ffffff;
+      --muted:#6b7280;
+      --ink:#111827;
+      --line:#e5e7eb;
+
+      --radius:22px;
+      --shadow:0 15px 40px rgba(0,0,0,.08);
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:"Segoe UI",Arial,sans-serif; }
+    body{ background:linear-gradient(135deg,#f1f5f9,#e2e8f0); color:#222; line-height:1.7; }
+
+    /* ===== HEADER / NAV (même style que tes pages) ===== */
+    header{
+      position:fixed; top:0; width:100%;
+      background:rgba(255,255,255,.97);
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      z-index:1000;
+    }
+    .nav{
+      max-width:1200px; margin:auto;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:16px 20px;
+      font-weight:600; font-size:18px;
+      gap:14px;
+    }
+    .logo{ display:flex; align-items:center; gap:12px; min-width:0; }
+    .logo img{ height:50px; width:auto; }
+    .logo span{
+      font-weight:900; color:var(--blue); font-size:20px; line-height:1.2;
+      white-space:nowrap;
+    }
+
+    nav{
+      display:flex; align-items:center; justify-content:flex-end;
+      flex-wrap:nowrap; white-space:nowrap;
+    }
+    nav a{
+      margin:0 12px; text-decoration:none; color:#333;
+      font-weight:600; font-size:18px; position:relative;
+      padding:10px 6px; white-space:nowrap;
+    }
+    nav a::after{
+      content:""; position:absolute; bottom:6px; left:6px;
+      width:0; height:2px; background:var(--blue); transition:.25s;
+    }
+    nav a:hover::after{ width:calc(100% - 12px); }
+    nav a.active{ color:var(--blue); }
+    nav a.active::after{ width:calc(100% - 12px); }
+
+    .menu-toggle{
+      display:none; font-size:34px; cursor:pointer; user-select:none;
+      padding:10px 12px; border-radius:14px;
+    }
+
+    /* ===== HERO ===== */
+    .hero{
+      height:55vh;
+      background:
+        linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),
+        url('fond-don.jpg') center/cover no-repeat;
+      display:flex; align-items:center; justify-content:center;
+      text-align:center; color:#fff; padding:20px;
+      margin-top:78px;
+    }
+    .hero .wrap{
+      max-width:980px; margin:auto;
+      display:grid; gap:14px; justify-items:center;
+    }
+    .hero-badge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:800; font-size:14px;
+    }
+    .hero h1{
+      font-size:52px; font-weight:950; line-height:1.05; letter-spacing:.2px;
+    }
+    .hero p{
+      font-size:19px; line-height:1.85; opacity:.96;
+      max-width:900px; margin:0 auto;
+    }
+    .hero-badges{
+      margin-top:6px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+    }
+    .hero-badges span{
+      padding:8px 14px; border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:800; font-size:14px;
+    }
+
+    /* ===== MAIN ===== */
+    main{
+      max-width:1200px; margin:auto;
+      padding:45px 20px 80px;
+      display:grid; gap:70px;
+    }
+
+    .section-card{
+      background:var(--card);
+      padding:60px;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .6s ease, transform .6s ease;
+    }
+    .section-card.in-view{ opacity:1; transform:none; }
+    .section-card::before{
+      content:""; position:absolute; top:0; left:0;
+      width:6px; height:100%;
+      background:linear-gradient(var(--blue),var(--green),var(--yellow));
+    }
+    .section-card h2{
+      text-align:center; color:var(--blue);
+      margin-bottom:18px; font-size:36px; font-weight:950;
+    }
+    .section-card p{
+      margin-bottom:16px;
+      font-size:18px; line-height:1.9; color:#1f2937;
+    }
+    .muted{
+      color:var(--muted); font-weight:800; font-size:14px;
+    }
+
+    /* ===== Confiance + stats ===== */
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+    .stat{
+      border-radius:18px;
+      background:linear-gradient(180deg,#f9f9f9,#ffffff);
+      box-shadow:0 10px 25px rgba(0,0,0,.05);
+      border:1px solid #eef2f7;
+      padding:22px;
+      display:grid;
+      gap:8px;
+      min-height:100%;
+    }
+    .stat .num{
+      font-size:38px;
+      font-weight:1000;
+      color:#fff;
+      width:max-content;
+      padding:10px 14px;
+      border-radius:16px;
+      background:linear-gradient(90deg, rgba(18,58,138,.95), rgba(11,122,85,.92));
+      letter-spacing:.5px;
+    }
+    .stat .label{
+      font-weight:950;
+      color:var(--ink);
+      font-size:15px;
+      margin-top:4px;
+    }
+    .stat .sub{
+      color:#374151;
+      font-weight:700;
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .quick-actions{
+      margin-top:16px;
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      justify-content:center;
+    }
+
+    /* ===== Form Don (2 colonnes) ===== */
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:22px;
+      margin-top:18px;
+      align-items:start;
+    }
+
+    .panel{
+      border-radius:18px;
+      background:linear-gradient(180deg,#f9f9f9,#ffffff);
+      box-shadow:0 10px 25px rgba(0,0,0,.05);
+      border:1px solid #eef2f7;
+      padding:22px;
+      display:grid;
+      gap:14px;
+      overflow:hidden; /* anti débordement */
+    }
+
+    .panel h3{
+      font-size:20px;
+      font-weight:1000;
+      color:var(--ink);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .chips{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .chip{
+      border:1px solid var(--line);
+      background:#f8fafc;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:950;
+      font-size:14px;
+      cursor:pointer;
+      user-select:none;
+      transition:transform .15s ease, box-shadow .15s ease;
+      max-width:100%;
+    }
+    .chip:hover{ transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.08); }
+    .chip.active{
+      background:rgba(18,58,138,.10);
+      border-color:rgba(18,58,138,.35);
+      color:var(--blue);
+    }
+
+    .field{ display:grid; gap:8px; }
+    label{ font-weight:950; color:#111827; font-size:14px; }
+
+    input, textarea{
+      width:100%;
+      border:1px solid var(--line);
+      background:#f8fafc;
+      border-radius:16px;
+      padding:14px 16px;
+      font-size:16px;
+      font-weight:700;
+      outline:none;
+      max-width:100%;
+    }
+
+    /* anti débordement : champs (email / tel / etc.) */
+    input[type="text"], input[type="email"], input[type="tel"]{
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+
+    textarea{
+      min-height:170px;
+      resize:vertical;
+      line-height:1.65;
+      white-space:pre-wrap;
+      word-break:break-word;
+      overflow-wrap:anywhere;
+    }
+
+    input:focus, textarea:focus{
+      border-color:rgba(18,58,138,.45);
+      box-shadow:0 0 0 4px rgba(18,58,138,.12);
+      background:#fff;
+    }
+
+    .helper{
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:4px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:1000;
+      font-size:14px;
+      border:none;
+      cursor:pointer;
+      transition:transform .15s ease, box-shadow .15s ease;
+      user-select:none;
+      max-width:100%;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 25px rgba(0,0,0,.12); }
+    .btn-primary{ background:linear-gradient(90deg,var(--yellow),#ffe27a); color:#000; }
+    .btn-green{ background:linear-gradient(90deg,var(--green),#12a56f); color:#fff; }
+    .btn-outline{ background:#fff; border:2px solid rgba(18,58,138,.55); color:var(--blue); }
+    .btn-ghost{ background:#f8fafc; border:1px solid #eef2f7; color:#111827; }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      width:max-content;
+      max-width:100%;
+      padding:10px 12px;
+      border-radius:999px;
+      background:#f8fafc;
+      border:1px solid #eef2f7;
+      color:#111827;
+      font-weight:900;
+      font-size:14px;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+
+    /* ===== FAQ ===== */
+    details{
+      border-radius:16px;
+      background:#f8fafc;
+      border:1px solid #eef2f7;
+      padding:12px 14px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:950;
+      color:#111827;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    details p{
+      margin-top:10px;
+      color:#374151;
+      font-weight:700;
+      font-size:14.5px;
+      line-height:1.75;
+    }
+
+    /* ===== FOOTER (avec ta marque) ===== */
+    footer{
+      background:linear-gradient(90deg,var(--blue),var(--dark));
+      color:#fff;
+      padding:50px 20px;
+      text-align:center;
+    }
+    footer p{ opacity:.95; font-weight:800; }
+    footer .credit{ margin-top:12px; opacity:.92; font-weight:800; }
+    footer .credit strong{ font-weight:950; }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:1200px){
+      nav a{ margin:0 10px; font-size:17px; }
+    }
+    @media(max-width:1050px){
+      nav a{ margin:0 8px; font-size:16px; }
+    }
+
+    /* ✅ menu mobile propre (panneau, pas une page blanche) */
+    @media(max-width:900px){
+      header{ position:sticky; top:0; }
+
+      .menu-toggle{ display:block; }
+
+      nav{
+        position:absolute;
+        top:78px;
+        right:16px;
+        left:16px;
+        width:auto;
+        background:#fff;
+        border-radius:18px;
+        border:1px solid #eef2f7;
+        box-shadow:0 18px 40px rgba(0,0,0,.12);
+        padding:10px;
+        display:none;
+        flex-direction:column;
+        gap:6px;
+        white-space:normal;
+        z-index:1001;
+      }
+      nav.active{ display:flex; }
+
+      nav a{
+        width:100%;
+        margin:0;
+        padding:12px 14px;      /* ✅ réduit l’espace */
+        font-size:17px;         /* ✅ compact */
+        text-align:left;
+        border-radius:14px;
+        background:#f8fafc;
+        border:1px solid #eef2f7;
+      }
+      nav a::after{ display:none; }
+      nav a.active{
+        background:rgba(18,58,138,.08);
+        border-color:rgba(18,58,138,.18);
+        color:var(--blue);
+      }
+
+      .hero{
+        margin-top:0 !important;
+        height:auto;
+        min-height:52vh;
+        padding:40px 18px;
+      }
+      .hero h1{ font-size:36px; }
+      .hero p{ font-size:17px; }
+
+      .section-card{ padding:40px 22px; }
+      .section-card h2{ font-size:30px; }
+
+      .stats-grid{ grid-template-columns:1fr; }
+
+      .grid-2{ grid-template-columns:1fr; }
+      .btn{ width:100%; justify-content:center; white-space:normal; }
+      .quick-actions{ justify-content:stretch; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .section-card, .chip, .btn{ transition:none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <div class="logo" aria-label="Mairie des Jeunes de Djougou">
+        <!-- Remplace le src par ton logo -->
+        <img src="logo.png" alt="Logo Mairie des Jeunes de Djougou" />
+        <span>Mairie des Jeunes de Djougou</span>
+      </div>
+
+      <div class="menu-toggle" id="navBtn" aria-label="Ouvrir le menu" aria-expanded="false">☰</div>
+
+      <nav id="navMenu" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="galerie.html">Galerie</a>
+        <a class="active" href="don.html">Don</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Faire un don">
+    <div class="wrap">
+      <div class="hero-badge">🤝 Soutenir une action • Impact local & international</div>
+      <h1>Faire un don</h1>
+      <p>
+        Votre soutien finance des actions concrètes : citoyenneté, environnement, inclusion, formations, accompagnement
+        et projets terrain. Pour une réponse rapide, privilégiez <strong>WhatsApp</strong>.
+      </p>
+      <div class="hero-badges">
+        <span>📍 Djougou</span>
+        <span>🇧🇯 Bénin</span>
+        <span>✅ Transparence</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- CONFIANCE + STATS -->
+    <section class="section-card" id="blockConfiance">
+      <h2>Confiance & redevabilité</h2>
+      <p>
+        Des actions visibles, mesurables et utiles. Nous mettons l’accent sur la transparence, les preuves terrain et le
+        suivi des résultats. Votre contribution est orientée vers des actions à impact.
+      </p>
+      <p class="muted">
+        Astuce : si vous arrivez depuis une actualité, le message de soutien est pré-rempli automatiquement.
+      </p>
+
+      <div class="stats-grid" id="statsGrid" aria-label="Chiffres clés">
+        <!-- Remplis automatiquement via Google Sheet -->
+        <div class="stat">
+          <div class="num" data-count="12" data-suffix="+">0</div>
+          <div class="label">Actions menées</div>
+          <div class="sub">Projets & activités</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-count="350" data-suffix="+">0</div>
+          <div class="label">Jeunes mobilisés</div>
+          <div class="sub">Terrain & engagement</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-count="8" data-suffix="+">0</div>
+          <div class="label">Partenaires</div>
+          <div class="sub">Local & international</div>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <a class="btn btn-outline" href="actualites.html">📰 Voir les actualités</a>
+        <a class="btn btn-green" href="contact.html#partenariat">🤝 Proposer un partenariat</a>
+      </div>
+    </section>
+
+    <!-- FORM DON (2 colonnes) -->
+    <section class="section-card" id="blockDon">
+      <h2>Don intelligent (rapide & guidé)</h2>
+      <p>
+        Choisissez un montant (optionnel), un type de soutien, puis envoyez un message prêt à l’emploi sur WhatsApp
+        (ou copiez-le). Si vous venez d’une actualité, l’action est déjà mentionnée dans le message.
+      </p>
+
+      <div class="grid-2">
+        <!-- COLONNE GAUCHE -->
+        <div class="panel" aria-label="Formulaire de soutien">
+          <h3>💬 Préparer le message</h3>
+
+          <div class="field">
+            <label>Choisir un montant (optionnel)</label>
+            <div class="chips" id="amountChips">
+              <span class="chip" data-amount="2000">2 000</span>
+              <span class="chip" data-amount="5000">5 000</span>
+              <span class="chip" data-amount="10000">10 000</span>
+              <span class="chip" data-amount="20000">20 000</span>
+            </div>
+            <input id="customAmount" type="text" inputmode="numeric" placeholder="Ou entrer un montant (FCFA) — ex : 15000" />
+            <div class="helper">Le montant est facultatif : vous pouvez aussi proposer un soutien matériel ou un partenariat.</div>
+          </div>
+
+          <div class="field">
+            <label>Type de soutien</label>
+            <div class="chips" id="typeChips">
+              <span class="chip active" data-type="Don financier">Don financier</span>
+              <span class="chip" data-type="Matériel / Logistique">Matériel / Logistique</span>
+              <span class="chip" data-type="Partenariat institutionnel">Partenariat institutionnel</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Message (modifiable)</label>
+            <textarea id="msg"></textarea>
+            <div class="helper">Vous pouvez personnaliser le message avant l’envoi.</div>
+          </div>
+
+          <div class="actions">
+            <!-- ✅ Remplace par ton WhatsApp officiel si besoin -->
+            <a class="btn btn-green" id="btnWhatsApp" href="#" target="_blank" rel="noopener">✅ Continuer sur WhatsApp</a>
+            <button class="btn btn-ghost" id="btnCopy" type="button">📋 Copier le message</button>
+          </div>
+
+          <div class="pill" id="actionPill" title="Action ciblée">🎯 Soutien : Général</div>
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div class="panel" aria-label="Transparence et contact don">
+          <h3>🛡️ Transparence</h3>
+          <p class="muted">Nous privilégions la clarté : suivi, preuves terrain et redevabilité.</p>
+
+          <div class="panel" style="padding:16px; gap:10px;">
+            <div class="pill">✅ Suivi des actions & résultats</div>
+            <div class="pill">📸 Preuves terrain (photos / activités)</div>
+            <div class="pill">📑 Redevabilité pour les partenaires</div>
+          </div>
+
+          <h3 style="margin-top:10px;">📞 Contact Don</h3>
+          <div class="pill" title="Canal officiel">WhatsApp : +229 99 90 83 98</div>
+          <div class="pill" title="Email officiel">Email : mairiedesjeunesdjougou@outlook.fr</div>
+
+          <div class="actions">
+            <a class="btn btn-outline" href="contact.html">📩 Page Contact</a>
+          </div>
+
+          <h3 style="margin-top:10px;">❓ FAQ rapide</h3>
+          <details>
+            <summary>Quel moyen de paiement choisir ?</summary>
+            <p>
+              Dites-nous votre préférence (MTN/Moov/virement/partenariat). Nous vous répondons avec la procédure la plus adaptée.
+            </p>
+          </details>
+          <details>
+            <summary>L’aide internationale est possible ?</summary>
+            <p>
+              Oui. Mentionnez “international” dans le message : nous proposerons une option adaptée selon votre zone.
+            </p>
+          </details>
+          <details>
+            <summary>Puis-je soutenir une action précise ?</summary>
+            <p>
+              Oui. Si vous venez d’une actualité, c’est automatique. Sinon, précisez le nom de l’action dans votre message.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Mairie des Jeunes de Djougou — Tous droits réservés</p>
+    <div class="credit">Site conçu et développé par <strong>Dine (DineTech)</strong></div>
+  </footer>
+
+  <script>
+    /* ===== Année footer ===== */
+    (() => {
+      const y = document.getElementById("year");
+      if (y) y.textContent = String(new Date().getFullYear());
+    })();
+
+    /* ===== Menu mobile (panneau propre) ===== */
+    (() => {
+      const navBtn = document.getElementById("navBtn");
+      const navMenu = document.getElementById("navMenu");
+      if (!navBtn || !navMenu) return;
+
+      navBtn.addEventListener("click", () => {
+        const open = navMenu.classList.toggle("active");
+        navBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      // Fermer au clic sur un lien
+      navMenu.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          navBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Fermer si clic hors menu
+      document.addEventListener("click", (e) => {
+        if (window.innerWidth > 900) return;
+        const clickInside = navMenu.contains(e.target) || navBtn.contains(e.target);
+        if (!clickInside) {
+          navMenu.classList.remove("active");
+          navBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+    })();
+
+    /* ===== Apparition douce des sections ===== */
+    (() => {
+      const cards = document.querySelectorAll(".section-card");
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) en.target.classList.add("in-view");
+        });
+      }, { threshold: 0.12 });
+      cards.forEach(c => io.observe(c));
+    })();
+
+    /* ===== CONFIG ===== */
+    const STATS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRAd5MCNdg0Bp1pYcn5bnQsw2-iqanAHbqdgn0FaG6wy2DCQygw1cIcvxaffTlXa83KAyY0Dv6fAmWc/pub?gid=905218795&single=true&output=csv";
+
+    // ✅ Mets ton vrai numéro WhatsApp (format international sans espaces)
+    const WHATSAPP_NUMBER = "22999908398";
+
+    // (optionnel) email affiché
+    const OFFICIAL_EMAIL = "mairiedesjeunesdjougou@outlook.fr";
+
+    /* ===== Utils ===== */
+    function getParams(){
+      const p = new URLSearchParams(window.location.search);
+      return {
+        action: (p.get("action") || "").trim(),
+        titre: (p.get("titre") || "").trim(),
+        date: (p.get("date") || "").trim()
+      };
+    }
+
+    function safeNumber(str){
+      const n = parseFloat(String(str).replace(/[^\d.-]/g,""));
+      return Number.isFinite(n) ? n : null;
+    }
+
+    function parseCSV(text){
+      // CSV simple (sans guillemets complexes)
+      const lines = text.trim().split(/\r?\n/).filter(Boolean);
+      if (!lines.length) return [];
+      const headers = lines[0].split(",").map(h => h.trim().toLowerCase());
+      const rows = [];
+      for (let i=1;i<lines.length;i++){
+        const cols = lines[i].split(",").map(c => c.trim());
+        const obj = {};
+        headers.forEach((h,idx)=> obj[h] = (cols[idx] ?? ""));
+        rows.push(obj);
+      }
+      return rows;
+    }
+
+    /* ===== Message auto (depuis Actualités -> Don) ===== */
+    function buildMessage({action, titre, date}, type, amount){
+      const base =
+`Bonjour, je souhaite soutenir la Mairie des Jeunes de Djougou (Mandature 2025–2030).
+
+${(titre || action) ? `Action ciblée : ${titre || action}${date ? ` (Date : ${date})` : ""}\n` : ""}Type de soutien : ${type}${amount ? `\nMontant : ${amount} FCFA` : ""}
+
+Pouvez-vous me dire quel moyen est le plus approprié (MTN/Moov, virement, partenariat) et la procédure ?`;
+
+      return base.trim();
+    }
+
+    /* ===== Chips montant + type ===== */
+    (() => {
+      const amountChips = document.getElementById("amountChips");
+      const customAmount = document.getElementById("customAmount");
+      const typeChips = document.getElementById("typeChips");
+      const msg = document.getElementById("msg");
+      const actionPill = document.getElementById("actionPill");
+      const btnWhatsApp = document.getElementById("btnWhatsApp");
+
+      const params = getParams();
+
+      // afficher action
+      const actionLabel = (params.titre || params.action) ? (params.titre || params.action) : "Général";
+      actionPill.textContent = "🎯 Soutien : " + actionLabel;
+
+      function getActiveType(){
+        const active = typeChips.querySelector(".chip.active");
+        return active ? active.dataset.type : "Don financier";
+      }
+
+      function getAmount(){
+        const active = amountChips.querySelector(".chip.active");
+        const chipAmount = active ? safeNumber(active.dataset.amount) : null;
+        const custom = safeNumber(customAmount.value);
+        return custom ?? chipAmount;
+      }
+
+      function refresh(){
+        const type = getActiveType();
+        const amount = getAmount();
+        msg.value = buildMessage(params, type, amount);
+
+        const encoded = encodeURIComponent(msg.value);
+        btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+      }
+
+      // init message
+      refresh();
+
+      // amount chips
+      amountChips.querySelectorAll(".chip").forEach(chip => {
+        chip.addEventListener("click", () => {
+          amountChips.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          customAmount.value = ""; // priorité au chip
+          refresh();
+        });
+      });
+
+      // custom amount
+      customAmount.addEventListener("input", () => {
+        amountChips.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+        refresh();
+      });
+
+      // type chips
+      typeChips.querySelectorAll(".chip").forEach(chip => {
+        chip.addEventListener("click", () => {
+          typeChips.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          refresh();
+        });
+      });
+
+      // si l’utilisateur modifie le message à la main => bouton WhatsApp suit
+      msg.addEventListener("input", () => {
+        const encoded = encodeURIComponent(msg.value);
+        btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+      });
+
+      // copier
+      document.getElementById("btnCopy").addEventListener("click", async () => {
+        try{
+          await navigator.clipboard.writeText(msg.value);
+          const btn = document.getElementById("btnCopy");
+          const old = btn.textContent;
+          btn.textContent = "✅ Copié !";
+          setTimeout(()=> btn.textContent = old, 1300);
+        }catch(e){
+          alert("Copie impossible. Sélectionnez le texte puis copiez manuellement.");
+        }
+      });
+    })();
+
+    /* ===== Stats via Sheet + Animation =====
+       Attendu dans ton sheet (simple) :
+       - soit 1 ligne avec colonnes: actions, jeunes, partenaires
+       - ou colonnes: key,value (ex: actions,12 ; jeunes,350 ; partenaires,8)
+       Si ton format est différent, je m’adapte après (tu m’envoies 1 capture du sheet).
+    */
+    async function loadStats(){
+      try{
+        const res = await fetch(STATS_CSV_URL, { cache: "no-store" });
+        if(!res.ok) throw new Error("CSV non accessible");
+        const txt = await res.text();
+        const rows = parseCSV(txt);
+
+        // 1) format A : une ligne avec actions/jeunes/partenaires
+        let actions = null, jeunes = null, partenaires = null;
+
+        if(rows.length){
+          const r0 = rows[0];
+
+          // format A
+          if (("actions" in r0) || ("jeunes" in r0) || ("partenaires" in r0)) {
+            actions = safeNumber(r0.actions);
+            jeunes = safeNumber(r0.jeunes);
+            partenaires = safeNumber(r0.partenaires);
+          }
+
+          // format B : key/value
+          if (actions === null && rows.some(r => ("key" in r) && ("value" in r))) {
+            rows.forEach(r => {
+              const k = String(r.key || "").toLowerCase();
+              const v = safeNumber(r.value);
+              if (k.includes("action")) actions = v;
+              if (k.includes("jeune")) jeunes = v;
+              if (k.includes("parten")) partenaires = v;
+            });
+          }
+        }
+
+        // fallback si non trouvé
+        actions = actions ?? 12;
+        jeunes = jeunes ?? 350;
+        partenaires = partenaires ?? 8;
+
+        const nums = document.querySelectorAll(".stat .num");
+        if(nums.length >= 3){
+          nums[0].dataset.count = String(actions);
+          nums[1].dataset.count = String(jeunes);
+          nums[2].dataset.count = String(partenaires);
+        }
+      }catch(e){
+        // on garde les valeurs par défaut
+      }
+    }
+
+    function animateCount(el){
+      const target = parseFloat(el.dataset.count || "0");
+      const suffix = el.dataset.suffix || "";
+      if(!Number.isFinite(target)) return;
+
+      const duration = 1100; // ms
+      const start = performance.now();
+      const from = 0;
+
+      function step(now){
+        const t = Math.min(1, (now - start) / duration);
+        // easing doux
+        const eased = 1 - Math.pow(1 - t, 3);
+        const val = Math.round(from + (target - from) * eased);
+        el.textContent = String(val) + suffix;
+        if(t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    (async () => {
+      await loadStats();
+
+      // animation quand visible
+      const nums = document.querySelectorAll(".stat .num");
+      const done = new WeakSet();
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if(en.isIntersecting){
+            const el = en.target;
+            if(!done.has(el)){
+              done.add(el);
+              animateCount(el);
+            }
+          }
+        });
+      }, { threshold: 0.4 });
+
+      nums.forEach(n => io.observe(n));
+    })();
+  </script>
+</body>
+</html>
