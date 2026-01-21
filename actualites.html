@@ -15,8 +15,8 @@
   <meta name="author" content="Mairie des Jeunes de Djougou" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-  <!-- CANONICAL (mets ton domaine final ici quand prêt) -->
-  <link rel="canonical" href="https://mdj-djougou.vercel.app/actualites.html" />
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://mairiedesjeunesdjougou.org/actualites.html" />
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -26,15 +26,15 @@
   <meta property="og:site_name" content="Mairie des Jeunes de Djougou" />
   <meta property="og:title" content="Actualités | Mairie des Jeunes de Djougou" />
   <meta property="og:description" content="Actions, communiqués et initiatives de la Mairie des Jeunes de Djougou. Mise à jour automatique." />
-  <meta property="og:url" content="https://mdj-djougou.vercel.app/actualites.html" />
-  <meta property="og:image" content="https://mdj-djougou.vercel.app/logo.png" />
+  <meta property="og:url" content="https://mairiedesjeunesdjougou.org/actualites.html" />
+  <meta property="og:image" content="https://mairiedesjeunesdjougou.org/logo.png" />
   <meta property="og:locale" content="fr_FR" />
 
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Actualités | Mairie des Jeunes de Djougou" />
   <meta name="twitter:description" content="Actions, communiqués et initiatives de la Mairie des Jeunes de Djougou. Mise à jour automatique." />
-  <meta name="twitter:image" content="https://mdj-djougou.vercel.app/logo.png" />
+  <meta name="twitter:image" content="https://mairiedesjeunesdjougou.org/logo.png" />
 
   <!-- SCHEMA.ORG (Site/Organisation) -->
   <script type="application/ld+json" id="schema-base">
@@ -44,8 +44,8 @@
       {
         "@type":"Organization",
         "name":"Mairie des Jeunes de Djougou",
-        "url":"https://mdj-djougou.vercel.app/",
-        "logo":"https://mdj-djougou.vercel.app/logo.png",
+        "url":"https://mairiedesjeunesdjougou.org/",
+        "logo":"https://mairiedesjeunesdjougou.org/logo.png",
         "areaServed":{"@type":"City","name":"Djougou"},
         "address":{"@type":"PostalAddress","addressLocality":"Djougou","addressCountry":"BJ"},
         "sameAs":[
@@ -55,13 +55,13 @@
       {
         "@type":"WebSite",
         "name":"Mairie des Jeunes de Djougou",
-        "url":"https://mdj-djougou.vercel.app/"
+        "url":"https://mairiedesjeunesdjougou.org/"
       },
       {
         "@type":"WebPage",
         "name":"Actualités",
-        "url":"https://mdj-djougou.vercel.app/actualites.html",
-        "isPartOf":{"@type":"WebSite","url":"https://mdj-djougou.vercel.app/"}
+        "url":"https://mairiedesjeunesdjougou.org/actualites.html",
+        "isPartOf":{"@type":"WebSite","url":"https://mairiedesjeunesdjougou.org/"}
       }
     ]
   }
@@ -703,8 +703,8 @@
 ========================= */
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRAd5MCNdg0Bp1pYcn5bnQsw2-iqanAHbqdgn0FaG6wy2DCQygw1cIcvxaffTlXa83KAyY0Dv6fAmWc/pub?gid=1341329862&single=true&output=csv";
 
-/* IMPORTANT : mets ton domaine final ici quand tu achètes mairiedesjeunesdjougou.org */
-const SITE_ORIGIN = "https://mdj-djougou.vercel.app";
+/* ✅ DOMAINE FINAL */
+const SITE_ORIGIN = "https://mairiedesjeunesdjougou.org";
 const PAGE_PATH = "/actualites.html";
 
 const year = document.getElementById("year");
@@ -833,6 +833,18 @@ function safeImage(url){
 
 function buildShareUrl(slug){
   return `${SITE_ORIGIN}${PAGE_PATH}#${encodeURIComponent(slug)}`;
+}
+
+/* ✅ LIEN DON (exactement comme ta page don.html attend) */
+function buildDonationLink(item){
+  const action = (item.categorie || "").trim();
+  const titre = (item.titre || "").trim();
+  const date = (item.date || "").trim(); // on envoie la date brute (dd/mm/yyyy)
+  const qs = new URLSearchParams();
+  if (action) qs.set("action", action);
+  if (titre) qs.set("titre", titre);
+  if (date) qs.set("date", date);
+  return `don.html?${qs.toString()}`;
 }
 
 /* =========================
@@ -1111,23 +1123,14 @@ function bindCards(container){
       }
 
       if (act === "support") {
-        // Pré-remplir message vers don.html
+        // ✅ Envoie vers don.html avec action/titre/date
         const item = allNews.find(x => x.slug === slug);
         if (item) {
-          const msg = buildDonationMessage(item);
-          btn.setAttribute("href", `don.html?message=${encodeURIComponent(msg)}&source=${encodeURIComponent(slug)}`);
+          btn.setAttribute("href", buildDonationLink(item));
         }
       }
     });
   });
-}
-
-/* =========================
-   DON MESSAGE
-========================= */
-function buildDonationMessage(item){
-  // message prêt (modifiable)
-  return `Bonjour, je souhaite soutenir l’action : "${item.titre}" (${item.categorie}, ${item.dateFR || item.date}). Je veux contribuer pour appuyer cette initiative de la Mairie des Jeunes de Djougou. Merci de me guider.`;
 }
 
 /* =========================
@@ -1212,8 +1215,8 @@ function openBySlug(slug){
   btnWhatsapp.href = `https://wa.me/?text=${encodeURIComponent(item.titre + " — " + shareUrl)}`;
   btnFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
 
-  const msg = buildDonationMessage(item);
-  btnSupport.href = `don.html?message=${encodeURIComponent(msg)}&source=${encodeURIComponent(item.slug)}`;
+  // ✅ bouton soutenir (modal) -> don.html?action&titre&date
+  btnSupport.href = buildDonationLink(item);
 
   // SEO dynamique pour cette actu
   applyArticleSEO(item);
