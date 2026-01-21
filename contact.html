@@ -82,7 +82,7 @@
   }
   </script>
 
- <style>
+  <style>
   :root{
     --green:#0b7a55;
     --yellow:#f4c430;
@@ -534,16 +534,10 @@
     header{ position:sticky; top:0; }
 
     /* header propre: logo + burger alignés */
-    nav{
-        position:absolute;
-        top:78px;
-        left:0;
-        width:100%;
-        background:white;
-        flex-direction:column;
-        display:none;
-        box-shadow:0 10px 30px rgba(0,0,0,.1);
-      }
+    .nav{
+      padding:14px 16px;
+      gap:12px;
+    }
 
     .logo img{ height:44px; }
 
@@ -616,16 +610,6 @@
       transition:none !important;
     }
   }
-   .pill{
-  max-width:100%;
-}
-
-@media(max-width:600px){
-  .pill{
-    white-space:normal;
-    word-break:break-all;
-  }
-}
 </style>
 </head>
 
@@ -1051,7 +1035,3 @@
 
 </body>
 </html>
-
-
-
-
