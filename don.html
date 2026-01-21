@@ -486,6 +486,39 @@
     @media (prefers-reduced-motion: reduce){
       .section-card, .chip, .btn{ transition:none !important; }
     }
+    /* FIX HEADER MOBILE (évite débordement du titre) */
+@media (max-width: 520px){
+  .nav{
+    padding:12px 12px;
+    gap:10px;
+  }
+
+  .logo{
+    min-width:0;              /* important */
+    max-width:72vw;           /* laisse de la place au menu ☰ */
+    overflow:hidden;
+  }
+
+  .logo img{
+    height:40px;              /* un peu plus petit sur mobile */
+    flex:0 0 auto;
+  }
+
+  .logo span{
+    white-space:normal;       /* ✅ enlève le nowrap */
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;      /* ✅ 2 lignes max */
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    font-size:16px;
+    line-height:1.15;
+  }
+
+  .menu-toggle{
+    flex:0 0 auto;
+  }
+}
   </style>
 </head>
 
@@ -901,3 +934,4 @@ Pouvez-vous me dire quel moyen est le plus approprié (MTN/Moov, virement, parte
   </script>
 </body>
 </html>
+
