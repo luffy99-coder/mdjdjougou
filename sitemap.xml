@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/index.html</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/apropos.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/projets.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/equipe.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/actualites.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/galerie.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/don.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://mairiedesjeunesdjougou.org/contact.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
